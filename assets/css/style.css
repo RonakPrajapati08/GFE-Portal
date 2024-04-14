@@ -27011,7 +27011,7 @@ html[dir=rtl] .choices__input {
 
 .main-GFE {
   /* background-color: #fbfff896; */
-  background-color: #F4FAF1;
+  background-color: #F4FFF1;
 }
 
 
@@ -27042,8 +27042,8 @@ html[dir=rtl] .choices__input {
 .truck {
   background: url('../images/Group\ 164.png') no-repeat;
   background-size: cover;
-  padding: 0 100px;
-  height: 100px;
+  padding: 50px 100px;
+  /* height: 100px; */
 }
 
 .flight {
@@ -27084,6 +27084,18 @@ html[dir=rtl] .choices__input {
     left: calc(100% + 100px);
   }
 }
+
+/* --------START Truck and flight Media Query--------- */
+
+@media only screen and (max-width: 600px) {
+  .truck {
+    background-size: contain;
+    padding: 33px 60px;
+  }
+}
+
+/* --------END Truck and flight Media Query--------- */
+
 
 
 .cont-hov:hover {
