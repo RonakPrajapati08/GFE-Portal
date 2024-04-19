@@ -65,7 +65,7 @@
 
                     const activeThemeIcon = document.querySelector('.theme-icon-active use')
 
-                    const btnToActive = document.querySelector([data - bs - theme - value="${theme}"])
+                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
 
                     const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
 
@@ -236,7 +236,7 @@
 
                 <!-- Main navbar START -->
 
-                <div class="navbar-collapse collapse ronni row " id="navbarCollapse">
+                <div class="navbar-collapse collapse ronni row align-items-center " id="navbarCollapse">
 
                     <!-- Nav category menu START -->
 
@@ -304,7 +304,7 @@
 
                     <!-- Nav Main menu START -->
 
-                    <ul class="navbar-nav navbar-nav-scroll gap-3 justify-content-center">
+                    <ul class="navbar-nav navbar-nav-scroll" style="justify-content: center;">
 
                         <!-- Nav item 1 Demos -->
 
@@ -403,18 +403,18 @@
                         <!-- Nav Main menu END -->
 
                         <!-- Nav Search START -->
-             
 
-                <!-- --------START Live Trade Button------------- -->
-                
-                <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
 
-                    <div class="nav-item w-100 ">
+                        <!-- --------START Live Trade Button------------- -->
 
-                        <a href="livetradeproduct.html" class="btn text-white mb-0" rel="noopener" style="background-color: #41B06E;"><span
-                                class="blink">Live
-                                Trade</span></a>
-                        <!-- <form class="position-relative">
+                        <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+
+                            <div class="nav-item w-100 ">
+
+                                <a href="livetradeproduct.html" class="btn text-white mb-0" rel="noopener"
+                                    style="background-color: #41B06E;"><span class="blink">Live
+                                        Trade</span></a>
+                                <!-- <form class="position-relative">
 
 									<input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
 										aria-label="Search">
@@ -429,9 +429,10 @@
 
 								</form> -->
 
-                    </div>
+                            </div>
+                        </div>
+                    </ul>
                 </div>
-            </div>
                 <!-- --------END Live Trade Button------------- -->
                 <!-- Main navbar END -->
 
@@ -569,142 +570,299 @@
     </header>
     <!-- asdadffsfv -->
 
-    <style>
-        .box-bg{
-            /* background-color: #F2FFE9; */
-            background-color: #ecfae0e3;
-        }
-        .text-weig {
-            font-weight: bold;
-        }
-        
-        .btn-success:hover {
-          box-shadow: rgba(0, 0, 0, .35) 1px 1px 9px 1px;
-          transform: translateY(-3px);
-        }
-    </style>
 
-    <section class="my-5 bg-dark">
-        <div class="container-fluid">
-            <div class="row justify-content-around gap-3">
-                <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded " >
-                        <h4 class="text-black card-title text-center" >BANANA</h4>
-                        <div class="Pogram-line mx-auto mb-4"></div>
-                        <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
-                        <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
-                        <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
-                        <div class="text-center">
-                            <a href="#" target="_blank"><button
-								class="btn btn-success mb-0 slide_right">Book Now</button></a>
-                        </div>
-                    </div>
+    <!-- --------------START LIVE TRADE Enquairy Form------------------- -->
+
+    <div class="modal Live-form fade overflow-y-hidden" id="Hims" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+            <div class="modal-content Live-form1">
+                <div class="modal-header p-2">
+                    <h4 class="modal-title fs-2 text-white font-bold " id="exampleModalLabel">Live Trade Form</h4>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-                <div class="col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Green Chilli</h4>
-                        <div class="Pogram-line mx-auto mb-4"></div>
-                        <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
-                        <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
-                        <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
-                        <div class="text-center">
-                            <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener">Book Now</a>
+                <div class="modal-body py-1">
+                    <form action="#!">
+                        <div class="row px-2">
+
+                            <div class="col-12 col-md-6  text-white">
+                                <label for="fullname" class="form-label">Full Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control p-1" id="fullname" name="fullname" value=""
+                                    placeholder="Name" required>
+                            </div>
+
+                            <div class="col-12 col-md-6 tred-marg text-white">
+                                <label for="phone" class="form-label">Phone Number <span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                        </svg>
+                                    </span>
+                                    <input type="tel" class="form-control p-1" id="phone" name="phone" value="">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 text-white  mt-2">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                        </svg>
+                                    </span>
+                                    <input type="email" class="form-control p-1" id="email" name="email" value=""
+                                        required>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-2">
+                                <label for="state" class="form-label text-white">Country<span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control p-1" name="State" value="" list="state"
+                                    placeholder="State" required>
+                                <!-- <datalist id="state">
+                                <option value="Gujarat">
+                                <option value="Goa">
+                                <option value="Maharashtra">
+                                <option value="West Bengal">
+                                <option value="Punjab">
+                            </datalist> -->
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-2">
+                                <label for="city" class="form-label text-white">City <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control p-1" name="City" value="" list="city"
+                                    placeholder="City" required>
+                                <!-- <input id="color" list="suggestions"> -->
+                                <!-- <datalist id="city">
+                                <option value="Patan">
+                                <option value="Ahmedabad">
+                                <option value="Hyderabad">
+                                <option value="Kolkata">
+                                <option value="Chennai">
+                            </datalist> -->
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-2">
+                                <label for="city" class="form-label text-white">PinCode <span
+                                        class="text-danger">*</span></label>
+                                <input type="number" class="form-control p-1" name="City" value="" placeholder="City"
+                                    required>
+                            </div>
+
+                            <div class="col-12 text-white mt-2">
+                                <label for="message" class="form-label">Message <span
+                                        class="text-danger">*</span></label>
+                                <textarea class="form-control p-1" id="message" name="message" rows="3"
+                                    required></textarea>
+                            </div>
+                            <div class="col-12 text-white my-3">
+                                <div class="d-grid">
+                                    <button class="btn p-2 live-trade-bt focus:outline-none hover:bg-indigo-600 btn-lg"
+                                        data-mdb-ripple-init type="button" type="submit">Send Message<i
+                                            class="fa-solid fa-arrow-right"></i></button>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded">
-                        <h4 class="text-black card-title text-center" >Drumstick</h4>
-                        <div class="Pogram-line mx-auto mb-4"></div>
-                        <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
-                        <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
-                        <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
-                        <div class="text-center">
-                            <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="myBtn"
-                            data-bs-toggle="modal" data-bs-target="#exampleModal" data-whatever="@mdo">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-around gap-3 my-3">
-                <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Elephant Yam</h4>
-                        <div class="Pogram-line mx-auto mb-4"></div>
-                        <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
-                        <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
-                        <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success mb-0" rel="noopener">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Ginger</h4>
-                        <div class="Pogram-line mx-auto mb-4"></div>
-                        <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
-                        <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
-                        <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
-                        <div class="text-center">
-                            <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Lomon</h4>
-                        <div class="Pogram-line mx-auto mb-4"></div>
-                        <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
-                        <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
-                        <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
-                        <div class="text-center">
-                            <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-around gap-3">
-                <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Semi Husk Coconut</h4>
-                        <div class="Pogram-line mx-auto mb-4"></div>
-                        <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
-                        <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
-                        <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
-                        <div class="text-center">
-                            <a href="#" class="btn btn-success mb-0" rel="noopener">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Tutmeric</h4>
-                        <div class="Pogram-line mx-auto mb-4"></div>
-                        <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
-                        <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
-                        <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
-                        <div class="text-center">
-                            <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class=" col-md-3">
-                    <div class="card-body  box-bg p-4 rounded" >
-                        <h4 class="text-black card-title text-center" >Pomegranate</h4>
-                        <div class="Pogram-line mx-auto mb-4"></div>
-                        <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
-                        <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
-                        <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
-                        <div class="text-center">
-                            <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener">Book Now</a>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
+    <script>
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("book");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <!-- ----------------END LIVE TRADE Enquairy Form------------------- -->
+    <main class="bg-dark">
+        <div class="row">
+            <div class="mx-auto text-center mt-4">
+                <button class="btn p-2 live-trade-bt focus:outline-none hover:bg-indigo-600 btn-lg text-white"
+                    data-mdb-ripple-init type="button" type="submit">Post Your Enquiry<i
+                        class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+
+        <style>
+            /* .Live-form{
+            background-color: #e1f2e8a8;
+        } */
+            .Live-form1 {
+                background-color: #0A1D56;
+            }
+
+            .box-bg {
+                /* background-color: #F2FFE9; */
+                background-color: #ecfae0e3;
+            }
+
+            .btn-success:hover {
+                box-shadow: rgba(0, 0, 0, .35) 1px 1px 9px 1px;
+                transform: translateY(-3px);
+            }
+        </style>
+
+        <section class=" bg-dark">
+            <div class="container-fluid">
+                <div class="row justify-content-around gap-3">
+                    <div class=" col-md-3">
+                        <div class="card-body  box-bg p-4 rounded ">
+                            <h4 class="text-black card-title text-center">BANANA</h4>
+                            <div class="Pogram-line mx-auto mb-4"></div>
+                            <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
+                            <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
+                            <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="book"
+                                    data-bs-toggle="modal" data-bs-target="#Hims" data-whatever="@mdo">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-body  box-bg p-4 rounded">
+                            <h4 class="text-black card-title text-center">Green Chilli</h4>
+                            <div class="Pogram-line mx-auto mb-4"></div>
+                            <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
+                            <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
+                            <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="book-now"
+                                    data-bs-toggle="modal" data-bs-target="#Hims" data-whatever="@mdo">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-3">
+                        <div class="card-body  box-bg p-4 rounded">
+                            <h4 class="text-black card-title text-center">Drumstick</h4>
+                            <div class="Pogram-line mx-auto mb-4"></div>
+                            <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
+                            <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
+                            <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="book-now"
+                                    data-bs-toggle="modal" data-bs-target="#Hims" data-whatever="@mdo">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-around gap-3 my-3">
+                    <div class=" col-md-3">
+                        <div class="card-body  box-bg p-4 rounded">
+                            <h4 class="text-black card-title text-center">Elephant Yam</h4>
+                            <div class="Pogram-line mx-auto mb-4"></div>
+                            <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
+                            <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
+                            <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="book-now"
+                                    data-bs-toggle="modal" data-bs-target="#Hims" data-whatever="@mdo">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-body  box-bg p-4 rounded">
+                            <h4 class="text-black card-title text-center">Ginger</h4>
+                            <div class="Pogram-line mx-auto mb-4"></div>
+                            <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
+                            <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
+                            <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="book-now"
+                                    data-bs-toggle="modal" data-bs-target="#Hims" data-whatever="@mdo">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-3">
+                        <div class="card-body  box-bg p-4 rounded">
+                            <h4 class="text-black card-title text-center">Lomon</h4>
+                            <div class="Pogram-line mx-auto mb-4"></div>
+                            <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
+                            <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
+                            <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="book-now"
+                                    data-bs-toggle="modal" data-bs-target="#Hims" data-whatever="@mdo">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-around gap-3">
+                    <div class=" col-md-3">
+                        <div class="card-body  box-bg p-4 rounded">
+                            <h4 class="text-black card-title text-center">Semi Husk Coconut</h4>
+                            <div class="Pogram-line mx-auto mb-4"></div>
+                            <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
+                            <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
+                            <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="book-now"
+                                    data-bs-toggle="modal" data-bs-target="#Hims" data-whatever="@mdo">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card-body  box-bg p-4 rounded">
+                            <h4 class="text-black card-title text-center">Tutmeric</h4>
+                            <div class="Pogram-line mx-auto mb-4"></div>
+                            <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
+                            <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
+                            <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="book-now"
+                                    data-bs-toggle="modal" data-bs-target="#Hims" data-whatever="@mdo">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-md-3">
+                        <div class="card-body  box-bg p-4 rounded">
+                            <h4 class="text-black card-title text-center">Pomegranate</h4>
+                            <div class="Pogram-line mx-auto mb-4"></div>
+                            <p class="card-text text-black fs-5 text-weig">Weight :- 13kg, 14kg Gros Hands - 4,5,6 </p>
+                            <p class="card-text text-black fs-5 text-weig">Packing :- Box </p>
+                            <p class="card-text text-black fs-5 text-weig">Country :- UAE </p>
+                            <div class="text-center">
+                                <a href="#" target="_blank" class="btn btn-success mb-0" rel="noopener" id="book-now"
+                                    data-bs-toggle="modal" data-bs-target="#Hims" data-whatever="@mdo">Book Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <!-- agduasguf -->
     <div
         class="rounded-social-buttons d-block d-sm-none fixed-bottom bg-blur border border-opacity-10 border-black pt-1">
@@ -791,11 +949,14 @@
 
                         <ul class="nav flex-column p-0">
 
-                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="./career.html">Career</a></li>
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                    href="./career.html">Career</a></li>
 
-                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="./about.html">About us</a></li>
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="./about.html">About
+                                    us</a></li>
 
-                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="./contact-us.html">Contact us</a></li>
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                    href="./contact-us.html">Contact us</a></li>
 
                             <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
                                     href="https://www.gfebusiness.org/blog/">Blogs</a></li>
@@ -811,7 +972,7 @@
                 <!-- Widget 3 START -->
 
                 <style>
-                    .andro-App{
+                    .andro-App {
                         aspect-ratio: 6/2;
                         width: 100%;
                         object-fit: cover;
@@ -829,7 +990,7 @@
                     </p>
 
                     <p class="mb-0 fs-5 text-black text-weig">Email: <a href="#"
-                                class="text-black text-weig ms-2 fs-5">info@gfebusiness.org</a></p>
+                            class="text-black text-weig ms-2 fs-5">info@gfebusiness.org</a></p>
 
                     <div class="row g-2 mt-2 align-items-start mx-auto justify-content-center">
 
@@ -839,7 +1000,7 @@
                             <a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
                                 <img src="assets/images/client/google-play.svg" class="mb-2 andro-App" alt=""> </a>
                         </div>
-                                <div class="col-6 col-sm-12 col-md-3 col-lg-6">
+                        <div class="col-6 col-sm-12 col-md-3 col-lg-6">
                             <a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
                                 <img src="assets/images/client/ios-store.png" class="andro-App" alt="">
                             </a>
@@ -879,8 +1040,8 @@
 
                                     <div class="dropup mt-0 text-center text-sm-end">
 
-                                        <a class="dropdown-toggle nav-link text-black" href="#" role="button" id="languageSwitcher"
-                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <a class="dropdown-toggle nav-link text-black" href="#" role="button"
+                                            id="languageSwitcher" data-bs-toggle="dropdown" aria-expanded="false">
 
                                             <i class="fas fa-globe me-2"></i>Language
 
@@ -888,14 +1049,17 @@
 
                                         <ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
 
-                                            <li><a class="dropdown-item me-4 text-black" href="#"><img class="fa-fw me-2"
-                                                        src="assets/images/flags/uk.svg" alt="">English</a></li>
+                                            <li><a class="dropdown-item me-4 text-black" href="#"><img
+                                                        class="fa-fw me-2" src="assets/images/flags/uk.svg"
+                                                        alt="">English</a></li>
 
-                                            <li><a class="dropdown-item me-4 text-black" href="#"><img class="fa-fw me-2"
-                                                        src="assets/images/flags/gr.svg" alt="">German </a></li>
+                                            <li><a class="dropdown-item me-4 text-black" href="#"><img
+                                                        class="fa-fw me-2" src="assets/images/flags/gr.svg"
+                                                        alt="">German </a></li>
 
-                                            <li><a class="dropdown-item me-4 text-black" href="#"><img class="fa-fw me-2"
-                                                        src="assets/images/flags/sp.svg" alt="">French</a></li>
+                                            <li><a class="dropdown-item me-4 text-black" href="#"><img
+                                                        class="fa-fw me-2" src="assets/images/flags/sp.svg"
+                                                        alt="">French</a></li>
 
                                         </ul>
 
@@ -903,7 +1067,8 @@
 
                                 </li>
 
-                                <li class="list-inline-item"><a class="nav-link text-black" href="terms-conditions.html">Terms &
+                                <li class="list-inline-item"><a class="nav-link text-black"
+                                        href="terms-conditions.html">Terms &
                                         Conditions</a></li>
 
                                 <li class="list-inline-item"><a class="nav-link pe-0 text-black"
@@ -933,7 +1098,7 @@
         class="d-sm-block d-none back-to-top_1 row align-items-center justify-content-center"><i
             class="fa-solid fa-phone mt-3 px-2"></i></a>
     <a type="button" title="Enquiry Form"
-        class="d-sm-block d-none back-to-top_2 row align-items-center justify-content-center" id="myBtn"
+        class="d-sm-block d-none back-to-top_2 row align-items-center justify-content-center" id="Hims"
         data-bs-toggle="modal" data-bs-target="#exampleModal" data-whatever="@mdo"><i
             class="fa-solid fa-file-signature mt-3 px-2"></i></a>
     <!-- <div class="hide">Enquiry</div> -->
@@ -1020,7 +1185,7 @@
         var modal = document.getElementById("myModal");
 
         // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
+        var btn = document.getElementById("Hims");
 
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];

@@ -26798,6 +26798,14 @@ html[dir=rtl] .choices__input {
   .ro {
     height: 150px;
   }
+
+  .sociality-mar {
+    margin: 15px 0;
+  }
+
+  .tred-marg {
+    margin-top: 7px;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -27241,18 +27249,58 @@ html[dir=rtl] .choices__input {
   }
 }
 
-/* .blink {
-  color: #EEE;
-
-  animation: bounce 0.4s ease infinite;
+.text-weig {
+  font-weight: bold;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
+.live-trade-bt {
+  border: 1px solid #fff;
+  color: #fff;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
 
-  100% {
-    transform: translateY(-30px);
-  }
-} */
+.live-trade-bt i {
+  margin-left: 10px;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+
+.live-trade-bt:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0cbc87;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.live-trade-bt:hover {
+  border-color: transparent;
+}
+
+.live-trade-bt:hover:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.live-trade-bt:hover i {
+  -webkit-transform: translateX(4px);
+  transform: translateX(4px);
+}
