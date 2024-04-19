@@ -26492,8 +26492,8 @@ html[dir=rtl] .choices__input {
 }
 
 .product-card:hover img {
-  scale: 1.1;
-  transition: 0.3s;
+  transform: scale(1.1);
+  transition: all 0.4s ease-in-out;
 }
 
 .main-btn {
@@ -26933,6 +26933,10 @@ html[dir=rtl] .choices__input {
     width: 30%;
     margin-bottom: 5px;
   }
+
+  .Heena {
+    padding: 8px 12px !important;
+  }
 }
 
 /* <button class="button-62" role="button">Button 62</button */
@@ -27023,36 +27027,68 @@ html[dir=rtl] .choices__input {
   right: -100px;
   position: absolute;
   background: green;
-  animation: truckMove 5s linear infinite;
+  animation: truckMove 7s linear infinite;
+  background: url('../images/Group\ 164.png') no-repeat;
+  background-size: cover;
+  padding: 0 100px;
+  height: 100px;
   /* Add animation */
 }
 
 .flight {
   transition: all ease;
-  width: 85px;
+  width: 90px;
   margin-right: -60px;
   bottom: -32px;
   right: -100px;
   position: absolute;
   /* background: green; */
-  animation: flightTakeoff 4s linear infinite;
-  /* Add animation */
-}
-
-.truck {
-  background: url('../images/Group\ 164.png') no-repeat;
-  background-size: cover;
-  padding: 50px 100px;
-  /* height: 100px; */
-}
-
-.flight {
+  animation: flightTakeoff 8s linear infinite;
   background: url('../images/Group_163-removebg-preview.png') no-repeat;
   background-size: contain;
   height: 100px;
+  /* Add animation */
 }
 
+/* .ship {
+  transition: all ease;
+  width: 18%;
+  margin-right: -60px;
+  bottom: -10px;
+  right: -100px;
+  position: absolute;
+  animation: shipMove 8s linear infinite;
+  background: url('../images/ship.png') no-repeat;
+  background-size: contain;
+  height: 100px;
+} */
+
+/* .truck {
+  background: url('../images/Group\ 164.png') no-repeat;
+  background-size: cover;
+  padding: 0 100px;
+  height: 100px;
+} */
+
+/* .flight {
+  background: url('../images/Group_163-removebg-preview.png') no-repeat;
+  background-size: contain;
+  height: 100px;
+} */
+
 @keyframes truckMove {
+  0% {
+    left: -100px;
+    /* Initial position */
+  }
+
+  100% {
+    left: calc(100% + 100px);
+    /* Move the truck to the right */
+  }
+}
+
+@keyframes shipMove {
   0% {
     left: -100px;
     /* Initial position */
@@ -27092,10 +27128,29 @@ html[dir=rtl] .choices__input {
     background-size: contain;
     padding: 33px 60px;
   }
+
+  /* ----------START Social icon Size--------- */
+  .Heena {
+    font-size: 20px !important;
+    padding: 8px 12px !important;
+  }
+
+  .close1 {
+    position: absolute !important;
+    left: 4% !important;
+  }
+
+  .Heena1 {
+    font-size: 20px !important;
+    padding: 8px 8px !important;
+  }
+
+  /* ----------END Social icon Size--------- */
+
+
 }
 
 /* --------END Truck and flight Media Query--------- */
-
 
 
 .cont-hov:hover {
@@ -27167,3 +27222,37 @@ html[dir=rtl] .choices__input {
   /* To position the blue rectangle */
 
 }
+
+
+.blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+  -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+/* .blink {
+  color: #EEE;
+
+  animation: bounce 0.4s ease infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-30px);
+  }
+} */

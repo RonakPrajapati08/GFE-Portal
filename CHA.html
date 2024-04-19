@@ -52,9 +52,7 @@
 
         }
 
-
         setTheme(getPreferredTheme())
-
 
         window.addEventListener('DOMContentLoaded', () => {
 
@@ -194,13 +192,13 @@
 
     <!-- Header START -->
 
-    <header class="navbar-light navbar-sticky main-GFE">
+    <header class="navbar-light navbar-sticky header-static main-GFE">
 
-        <!-- Logo Nav START -->
+        <!-- Nav START -->
 
         <nav class="navbar navbar-expand-xl">
 
-            <div class="container">
+            <div class="container-fluid px-3 px-xl-5">
 
                 <!-- Logo START -->
 
@@ -213,10 +211,12 @@
                         style="height:55px;width:180px;">
 
                 </a>
+
                 <!-- Logo END -->
+
                 <!-- Responsive navbar toggler -->
 
-                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+                <button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
                     aria-label="Toggle navigation">
 
@@ -229,100 +229,202 @@
                     </span>
 
                 </button>
+
                 <!-- Main navbar START -->
 
-                <div class="navbar-collapse w-100 collapse ronni" id="navbarCollapse">
+                <div class="navbar-collapse collapse ronni row " id="navbarCollapse">
 
-                    <ul class="navbar-nav navbar-nav-scroll me-auto">
+                    <!-- Nav category menu START -->
+
+                    <!-- <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+
+						<li class="nav-item dropdown dropdown-menu-shadow-stacked">
+
+							<a class="nav-link bg-primary bg-opacity-10 rounded-3 text-primary px-3 py-3 py-xl-0"
+								href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false"><i class="bi bi-ui-radios-grid me-2"></i><span>Category</span></a>
+
+							<ul class="dropdown-menu" aria-labelledby="categoryMenu">
+
+								<li class="dropdown-submenu dropend">
+
+									<a class="dropdown-item" href="#">Online Business University</a>
+
+									<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+										<li class="dropdown-submenu dropend">
+
+											<a class="dropdown-item" href="#">Export Import Training</a>
+
+										</li>
+
+										<li> <a class="dropdown-item" href="#">ECommerce Online Training</a> </li>
+
+										<li> <a class="dropdown-item" href="#">India’s Top 10 EXIM Products</a> </li>
+
+										<li> <a class="dropdown-item" href="#">Prepare Governments Documents</a> </li>
+
+									</ul>
+
+								</li>
+
+								<li class="dropdown-submenu dropend">
+
+									<a class="dropdown-item" href="#">International Buyers-Sellers Network</a>
+
+									<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+										<li class="dropdown-submenu dropend">
+
+											<a class="dropdown-item" href="#">Trade Activities</a>
+
+										</li>
+
+										<li> <a class="dropdown-item" href="#">Buy any Products</a> </li>
+
+										<li> <a class="dropdown-item" href="#">Become International Seller/Supplier</a>
+										</li>
+
+									</ul>
+
+								</li>
+
+							</ul>
+
+						</li>
+
+					</ul> -->
+
+                    <!-- Nav category menu END -->
+
+                    <!-- Nav Main menu START -->
+
+                    <ul class="navbar-nav navbar-nav-scroll gap-3 justify-content-center">
 
                         <!-- Nav item 1 Demos -->
 
                         <li class="nav-item dropdown">
+
                             <a class="nav-link" href="index.html" id="demoMenu" aria-haspopup="true"
                                 aria-expanded="false">Home</a>
+
                         </li>
 
                         <li class="nav-item dropdown">
+
                             <a class="nav-link" href="about.html" id="demoMenu" aria-haspopup="true"
                                 aria-expanded="false">About Us</a>
+
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="gallery.html" id="demoMenu"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Gallery</a>
+
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="gallery.html"
+                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Gallery</a>
+
                             <ul class="dropdown-menu" aria-labelledby="demoMenu">
+
                                 <li> <a class="dropdown-item" href="team.html">Team</a></li>
+
                                 <li> <a class="dropdown-item" href="clients.html">Clients</a></li>
+
                                 <li> <a class="dropdown-item" href="events.html">Events</a></li>
+
                                 <li> <a class="dropdown-item " href="awards.html">Awards</a></li>
+
                                 <li> <a class="dropdown-item " href="media.html">Media Coverage</a></li>
-                                <li> <a class="dropdown-item " href="serviceproduct.html">Services</a></li>
+
                             </ul>
+
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="download.html" id="demoMenu"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Download</a>
+
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="download.html"
+                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Download</a>
+
                             <ul class="dropdown-menu" aria-labelledby="demoMenu">
                                 <li> <a class="dropdown-item" id="mbtn" data-bs-toggle="modal" data-bs-target="#boby"
                                         data-whatever="@mdo" href="#">Product Research Report</a></li>
+
                                 <li> <a class="dropdown-item" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
-                                        data-whatever="@mdo" href="#">Genuine International Buyers-Sellers
-                                        Data</a></li>
+                                        data-whatever="@mdo" href="#">Genuine International Buyers-Sellers Data</a></li>
+
                             </ul>
+
                         </li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="resources.html" id="demoMenu"
-                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources</a>
+
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="resources.html"
+                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Resources</a>
+
                             <ul class="dropdown-menu" aria-labelledby="demoMenu">
+
                                 <li> <a class="dropdown-item" href="https://www.indiantradeportal.in/"
                                         target="_blank">HSN Code
                                         Search</a></li>
+
                                 <li> <a class="dropdown-item" href="https://www.xe.com/currencyconverter/"
                                         target="_blank">Currency
                                         Converter</a></li>
+
+                                <li> <a class="dropdown-item" target="_blank"
+                                        href="https://www.searates.com/shipping/request?utm_source=google&utm_medium=cpc&utm_campaign=17499343658&utm_content=142980297292&utm_term=freight%20calculator&gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJU_Pim9FfTNBF0az3bh9ZV8KRj1PosCr5fYmnDEyrt1ukw5-V0vNYBoCvT8QAvD_BwE">Freight
+                                        Calculator</a></li>
+
+                                <li> <a class="dropdown-item" href="serviceproduct.html">Services</a></li>
+                                <!-- <li> <a class="dropdown-item" href="countryviceproduct.html">Country vice Product Demand</a></li> -->
+
                             </ul>
+
                         </li>
+
                         <li class="nav-item dropdown">
 
                             <a class="nav-link" href="career.html" id="demoMenu" aria-haspopup="true"
                                 aria-expanded="false">Career</a>
+
                         </li>
+
                         <li class="nav-item dropdown">
 
                             <a class="nav-link" href="contact-us.html" id="demoMenu" aria-haspopup="true"
                                 aria-expanded="false">Contact Us</a>
+
                         </li>
-                    </ul>
-                    <!-- Nav Search START -->
 
-                    <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+                        <!-- Nav Main menu END -->
 
-                        <div class="nav-item w-100">
-
-                            <form class="position-relative">
-
-                                <input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
-                                    aria-label="Search">
-
-                                <button
-                                    class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
-                                    type="submit">
-
-                                    <i class="fas fa-search fs-6 "></i>
-
-                                </button>
-
-                            </form>
-
-                        </div>
-
-                    </div>
-
-                    <!-- Nav Search END -->
-
+                        <!-- Nav Search START -->
                 </div>
+
+                <!-- --------START Live Trade Button------------- -->
+                <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+
+                    <div class="nav-item w-100 ">
+
+                        <a href="livetradeproduct.html" class="btn btn-primary mb-0" rel="noopener"><span
+                                class="blink">Live
+                                Trade</span></a>
+                        <!-- <form class="position-relative">
+
+									<input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
+										aria-label="Search">
+
+									<button
+										class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
+										aria-label="submit" type="submit">
+
+										<i class="fas fa-search fs-6 "></i>
+
+									</button>
+
+								</form> -->
+                    </div>
+                </div>
+                <!-- --------END Live Trade Button------------- -->
 
                 <!-- Main navbar END -->
 
@@ -392,7 +494,6 @@
                         <!-- Dark mode options START -->
 
                         <li>
-
                             <div
                                 class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
 
@@ -400,64 +501,38 @@
 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
-
                                         <path
                                             d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
-
                                         <use href="#"></use>
-
                                     </svg> Light
-
                                 </button>
 
                                 <button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
-
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
-
                                         <path
                                             d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
-
                                         <path
                                             d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
-
                                         <use href="#"></use>
-
                                     </svg> Dark
-
                                 </button>
-
                                 <button type="button" class="btn btn-sm mb-0 active" data-bs-theme-value="auto">
-
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                         class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
-
                                         <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
-
                                         <use href="#"></use>
-
                                     </svg> Auto
-
                                 </button>
-
                             </div>
-
                         </li>
-
                         <!-- Dark mode options END-->
-
                     </ul>
-
                 </div>
-
                 <!-- Profile START -->
-
             </div>
-
         </nav>
-
-        <!-- Logo Nav END -->
-
+        <!-- Nav END -->
     </header>
 
     <!-- Header END -->
@@ -657,21 +732,14 @@
                                                 <option value="Chennai">
                                             </datalist>
                                         </div>
-
-
                                         <div class="col-12">
-
                                             <button type="submit" class="btn btn-success mb-0">Send Inquiry</button>
-
                                         </div>
-
                                     </form>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
 
                     <div class="col-lg-5 position-relative mt-4 mt-lg-0">
 
@@ -720,9 +788,9 @@
 
                         <!-- List -->
 
-                        <ul class="list-group list-group-borderless mt-0">
+                        <ul class="list-group list-group-borderless mt-0 ">
 
-                            <li class="list-group-item d-flex">
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>
                                 Expertise and Experience: Our team of experienced professionals possesses in-depth
                                 knowledge of customs regulations, tariffs, and trade policies. with years of experience
@@ -730,7 +798,7 @@
                                 delays and avoiding penalties.
                             </li>
 
-                            <li class="list-group-item d-flex">
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>
                                 Customized Solutions: We understand that every business has unique requirements. whether
                                 you're importing machinery, electronics, textiles, or any other goods, we tailor our
@@ -738,7 +806,7 @@
                                 personalized solutions to streamline your operations.
                             </li>
 
-                            <li class="list-group-item d-flex">
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>
                                 Efficient Clearance Process: Navigating the customs clearance process can be
                                 time-consuming and challenging. by entrusting us with your customs documentation and
@@ -747,7 +815,7 @@
                                 activities.
                             </li>
 
-                            <li class="list-group-item d-flex">
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>
                                 Cost Savings: Delays in customs clearance can lead to storage charges, demurrage fees,
                                 and other additional costs. with our efficient customs clearance services, we help
@@ -756,14 +824,14 @@
                                 further reducing your overall costs.
                             </li>
 
-                            <li class="list-group-item d-flex">
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>
                                 Compliance Assurance: Compliance with customs regulations is critical to avoiding
                                 penalties and disruptions to your supply chain. our CHA services ensure that your import
                                 and export activities adhere to all applicable laws and regulations. we stay updated on
                                 the latest changes in customs procedures, keeping your business compliant at all times.
                             </li>
-                            <li class="list-group-item d-flex">
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>
                                 Risk Mitigation: International trade involves inherent risks, including regulatory
                                 compliance, documentation errors, and cargo security issues. our team employs robust
@@ -771,14 +839,13 @@
                                 documentation checks to cargo tracking and security measures, we prioritize the safety
                                 and security of your shipments.
                             </li>
-                            <li class="list-group-item d-flex">
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>
                                 Customer Support: At every step of the import and export process, our dedicated customer
                                 support team is available to address your queries and concerns. whether you need
                                 assistance with documentation, customs clearance status updates, or any other issue, we
                                 provide prompt and reliable support to ensure a seamless experience.
                             </li>
-
                         </ul>
 
                     </div>
@@ -790,10 +857,8 @@
                     <div class="col-lg-6 position-relative text-center">
 
                         <!-- Image -->
-
                         <img src="assets/images/courses/programs/benefits.png" class="rounded-2" alt=""
                             style="background-color: rgba(130, 185, 75, 0.385);">
-
                     </div>
 
                     <!-- Right side END -->
@@ -813,10 +878,8 @@
                 <div class="row g-4 align-items-center">
 
                     <div class="col-lg-6">
-
                         <img src="assets/images/courses/programs/service.jpg" class="rounded-2" alt=""
                             style="height:400px;width:600px;">
-
                     </div>
 
                     <!--Right side	-->
@@ -830,38 +893,32 @@
                         <!-- List -->
 
                         <ul class="list-group list-group-borderless mt-0">
-
-                            <li class="list-group-item d-flex">
-
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>
                                 CHA query
 
                             </li>
 
-                            <li class="list-group-item d-flex">
-
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>
                                 Quotation support
                             </li>
 
-                            <li class="list-group-item d-flex">
-
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>
                                 Container booking
                             </li>
 
-                            <li class="list-group-item d-flex">
-
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>Custom clearance
                             </li>
 
-                            <li class="list-group-item d-flex">
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i>Documentations
                             </li>
-                            <li class="list-group-item d-flex">
+                            <li class="list-group-item d-flex text-black">
                                 <i class="bi bi-patch-check-fill text-success me-2"></i> Clearance including Air and sea
                             </li>
-
                         </ul>
 
                     </div>
@@ -876,7 +933,7 @@
 
         <section class="py-0 py-xl-5">
 
-            <div class="container" align="center">
+            <div class="container  text-black" align="center">
 
                 <h4 class="h4 mb-4">Empowering Entrepreneurs Globally</h4>
 
@@ -959,13 +1016,9 @@
 
                                     <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0"
                                         data-purecounter-end="25" data-purecounter-delay="200">25</h5>
-
                                     <span class="mb-0 h5">K+</span>
-
                                 </div>
-
                                 <p class="mb-0"> Premium Members</p>
-
                             </div>
 
                         </div>
@@ -982,28 +1035,17 @@
                             <span class="display-6 lh-1 text-info mb-0"><i class="bi bi-phone"></i></span>
 
                             <div class="ms-4 h6 fw-normal mb-0">
-
                                 <div class="d-flex">
-
                                     <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0"
                                         data-purecounter-end="30" data-purecounter-delay="300">30</h5>
-
                                     <span class="mb-0 h5">K+</span>
-
                                 </div>
-
                                 <p class="mb-0"> App Downloads</p>
-
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
-
         </section>
         <!-- Reviews start -->
 
@@ -1017,9 +1059,7 @@
                 <div class="row mb-4">
 
                     <div class="col-lg-8 mx-auto text-center">
-
                         <h2>Amazing Reviews</h2>
-
                     </div>
 
                 </div>
@@ -1050,10 +1090,8 @@
                                     <!-- Avatar -->
 
                                     <div class="avatar avatar-lg mb-3">
-
                                         <img class="avatar-img rounded-circle" src="assets/images/pages/3.png"
                                             alt="avatar">
-
                                     </div>
 
                                     <!-- Title -->
@@ -1062,8 +1100,7 @@
 
                                     <!-- Content -->
 
-                                    <blockquote class="mt-1">
-
+                                    <blockquote class="mt-1 text-black">
                                         <p>
                                             <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
                                             I had an excellent experience with GFE group. Took GSP Plan service , All
@@ -1072,7 +1109,6 @@
                                             staff are lovely
                                             <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
                                         </p>
-
                                     </blockquote>
 
                                 </div>
@@ -1082,16 +1118,13 @@
                             <!-- Feedback item -->
 
                             <div>
-
                                 <div class="bg-body text-center p-4  rounded-3 border border-1 position-relative">
 
                                     <!-- Avatar -->
 
                                     <div class="avatar avatar-lg mb-3">
-
                                         <img class="avatar-img rounded-circle" src="assets/images/pages/4.png"
                                             alt="avatar">
-
                                     </div>
 
                                     <!-- Title -->
@@ -1100,8 +1133,7 @@
 
                                     <!-- Content -->
 
-                                    <blockquote class="mt-1 m-y">
-
+                                    <blockquote class="mt-1 m-y text-black">
                                         <p>
                                             <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
                                             The training the faculties imparting are really helpful with detail coverage
@@ -1109,36 +1141,23 @@
                                             session.... Simply Great GFE...
                                             <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
                                         </p>
-
                                     </blockquote>
-
                                 </div>
-
                             </div>
 
                             <!-- Feedback item -->
 
                             <div>
-
                                 <div class="bg-body text-center p-4 rounded-3 border border-1 position-relative">
-
                                     <!-- Avatar -->
-
                                     <div class="avatar avatar-lg mb-3">
-
                                         <img class="avatar-img rounded-circle" src="assets/images/pages/P 1.jpg"
                                             alt="avatar">
-
                                     </div>
-
                                     <!-- Title -->
-
                                     <h6 class="mb-2">Prashant Sharma</h6>
-
                                     <!-- Content -->
-
-                                    <blockquote class="mt-1">
-
+                                    <blockquote class="mt-1 text-black">
                                         <p>
                                             <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
                                             It's really wonderful telling that problem solving part by GFE is awesome
@@ -1146,7 +1165,6 @@
                                             relating to Import/Export and once again thanks for supporting..
                                             <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
                                         </p>
-
                                     </blockquote>
 
                                 </div>
@@ -1156,25 +1174,16 @@
                             <!-- Feedback item -->
 
                             <div>
-
                                 <div class="bg-body text-center p-4 rounded-3 border border-1 position-relative">
-
                                     <!-- Avatar -->
-
                                     <div class="avatar avatar-lg mb-3">
-
                                         <img class="avatar-img rounded-circle" src="assets/images/pages/2.png"
                                             alt="avatar">
-
                                     </div>
-
                                     <!-- Title -->
-
                                     <h6 class="mb-2">Mayur Patel</h6>
-
                                     <!-- Content -->
-
-                                    <blockquote class="mt-1">
+                                    <blockquote class="mt-1 text-black">
 
                                         <p>
                                             <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
@@ -1184,9 +1193,7 @@
                                             up and guidence.
                                             <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
                                         </p>
-
                                     </blockquote>
-
                                 </div>
 
                             </div>
@@ -1198,10 +1205,8 @@
                                     <!-- Avatar -->
 
                                     <div class="avatar avatar-lg mb-3">
-
                                         <img class="avatar-img rounded-circle" src="assets/images/pages/5.png"
                                             alt="avatar">
-
                                     </div>
 
                                     <!-- Title -->
@@ -1210,44 +1215,30 @@
 
                                     <!-- Content -->
 
-                                    <blockquote class="mt-1 m-y">
-
+                                    <blockquote class="mt-1 m-y text-black">
                                         <p>
                                             <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
                                             We have taken GSP plan from GFE, and we heartly thank full to GFE all team
                                             members for their great support by training, business set up and trade
                                             related guidance
                                             <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
-
                                         </p>
-
                                     </blockquote>
-
                                 </div>
 
                             </div>
 
                             <div>
-
                                 <div class="bg-body text-center p-4 rounded-3 border border-1 position-relative">
-
                                     <!-- Avatar -->
-
                                     <div class="avatar avatar-lg mb-3">
-
                                         <img class="avatar-img rounded-circle" src="assets/images/pages/6.png"
                                             alt="avatar">
-
                                     </div>
-
                                     <!-- Title -->
-
                                     <h6 class="mb-2">Shashank Rai</h6>
-
                                     <!-- Content -->
-
-                                    <blockquote class="mt-1 m-y">
-
+                                    <blockquote class="mt-1 m-y text-black">
                                         <p>
                                             <span class="me-1 small"><i class="fas fa-quote-left"></i></span>
                                             Shipping our first full container with the support of GFE team to Dubai. It
@@ -1255,25 +1246,15 @@
                                             Lemon, Red Pumpkin, Turmeric, etc.
                                             <span class="ms-1 small"><i class="fas fa-quote-right"></i></span>
                                         </p>
-
                                     </blockquote>
-
                                 </div>
-
                             </div>
-
                         </div>
-
                     </div>
-
                     <!-- Slider START -->
-
                 </div>
-
                 <!-- Feedback END -->
-
             </div>
-
         </section>
 
 
@@ -1420,7 +1401,7 @@
 
                     <h3 class="h3 mb-4">Why Export- Import is BEST OPPORTUNITY for Future</h3>
 
-                    <div class="col-lg-6">
+                    <div class="col-lg-6  text-black">
 
                         <!-- List -->
 
@@ -1567,7 +1548,7 @@
                     <div class="col-sm-6 col-md-4 col-xl-3">
 
                         <div
-                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 text-black position-relative btn-transition">
 
                             <!-- Image -->
 
@@ -1592,7 +1573,7 @@
                     <div class="col-sm-6 col-md-4 col-xl-3">
 
                         <div
-                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 text-black position-relative btn-transition">
 
                             <!-- Image -->
 
@@ -1617,7 +1598,7 @@
                     <div class="col-sm-6 col-md-4 col-xl-3">
 
                         <div
-                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 text-black position-relative btn-transition">
 
                             <!-- Image -->
 
@@ -1642,7 +1623,7 @@
                     <div class="col-sm-6 col-md-4 col-xl-3">
 
                         <div
-                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 position-relative btn-transition">
+                            class="bg-primary bg-opacity-10 rounded-3 text-center p-3 text-black position-relative btn-transition">
 
                             <!-- Image -->
 
@@ -1681,9 +1662,7 @@
                 <div class="row position-relative z-index-9">
 
                     <div class="col-12 text-center mx-auto">
-
                         <h2 class="mb-0">Frequently Asked Questions</h2>
-
                     </div>
 
                 </div>
@@ -1691,209 +1670,146 @@
                 <div class="row">
 
                     <div class="col-lg-10 col-xl-8 mx-auto text-center position-relative">
-
                         <!-- SVG decoration -->
-
                         <figure class="position-absolute top-0 start-0 translate-middle ms-8">
-
                             <svg style="enable-background:new 0 0 141.7 143.9;">
-
                                 <path class="fill-success"
                                     d="M137.7,53.1c9.6,29.3,1.8,64.7-20.2,80.7s-58.1,12.6-83.5-5.8C8.6,109.5-6.1,76.1,2.4,48.7 C10.8,21.1,42.2-0.7,71.5,0S128.1,23.8,137.7,53.1z" />
-
                             </svg>
-
                         </figure>
 
                         <!-- SVG decoration -->
 
                         <figure class="position-absolute bottom-0 end-0 me-n9 rotate-193">
-
                             <svg width="297.5px" height="295.9px">
-
                                 <path stroke="#F99D2B" fill="none" stroke-width="13"
                                     d="M286.2,165.5c-9.8,74.9-78.8,128.9-153.9,120.4c-76-8.6-131.4-78.2-122.8-154.2C18.2,55.8,87.8,0.3,163.7,9">
                                 </path>
-
                             </svg>
 
                         </figure>
-
                         <!-- FAQ START -->
-
                         <div class="accordion accordion-icon accordion-shadow mt-4 text-start position-relative"
                             id="accordionExample2">
-
                             <!-- Item -->
-
                             <div class="accordion-item mb-3">
-
                                 <h6 class="accordion-header font-base" id="heading-1">
-
                                     <button class="accordion-button fw-bold rounded collapsed pe-5" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true"
                                         aria-controls="collapse-1">
                                         Why to do Export Import Business?
                                     </button>
-
                                 </h6>
-
                                 <!-- Body -->
-
                                 <div id="collapse-1" class="accordion-collapse collapse show"
                                     aria-labelledby="heading-1" data-bs-parent="#accordionExample2">
-
-                                    <div class="accordion-body mt-3">
+                                    <div class="accordion-body mt-3 text-black">
                                         This is biggest and Best opportunity with less investment, global reach in 190+
                                         Countries with Uniform System.
                                     </div>
-
                                 </div>
 
                             </div>
-
                             <!-- Item -->
-
                             <div class="accordion-item mb-3">
 
                                 <h6 class="accordion-header font-base" id="heading-2">
-
                                     <button class="accordion-button fw-bold rounded collapsed pe-5" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false"
                                         aria-controls="collapse-2">
                                         Why come for Export Import with GFE?
                                     </button>
-
                                 </h6>
-
                                 <!-- Body -->
-
                                 <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="heading-2"
                                     data-bs-parent="#accordionExample2">
-
-                                    <div class="accordion-body mt-3">
+                                    <div class="accordion-body mt-3 text-black">
                                         GFE is world’s Biggest Business Support Platform with Best brains from Industry,
                                         we have 15,000+ success stories, presence in 30+ Countries and 50+ Cities.
                                     </div>
-
                                 </div>
 
                             </div>
-
                             <!-- Item -->
-
                             <div class="accordion-item mb-3">
 
                                 <h6 class="accordion-header font-base" id="heading-3">
-
                                     <button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false"
                                         aria-controls="collapse-3">
                                         I already have documents, IEC, but got no orders?
                                     </button>
-
                                 </h6>
-
                                 <!-- Body -->
-
                                 <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="heading-3"
                                     data-bs-parent="#accordionExample2">
-
-                                    <div class="accordion-body mt-3">
+                                    <div class="accordion-body mt-3 text-black">
                                         We have big network and Ready Deals from UAE, Bangladesh, Nepal, UK, USA and
                                         many other Countries.
                                     </div>
-
                                 </div>
 
                             </div>
-
                             <!-- Item -->
-
                             <div class="accordion-item mb-3">
 
                                 <h6 class="accordion-header font-base" id="heading-4">
-
                                     <button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false"
                                         aria-controls="collapse-4">
                                         I have very less investment?
                                     </button>
-
                                 </h6>
-
                                 <!-- Body -->
-
                                 <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="heading-4"
                                     data-bs-parent="#accordionExample2">
-
-                                    <div class="accordion-body mt-3">
+                                    <div class="accordion-body mt-3 text-black">
                                         <p>This is a low investment Business model which you can scale up later
                                             gradually.</p>
                                     </div>
-
                                 </div>
 
                             </div>
-
                             <!-- Item -->
-
                             <div class="accordion-item mb-3">
-
                                 <h6 class="accordion-header font-base" id="heading-5">
-
                                     <button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false"
                                         aria-controls="collapse-5">
                                         How will I get support?
                                     </button>
-
                                 </h6>
-
                                 <!-- Body -->
-
                                 <div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="heading-5"
                                     data-bs-parent="#accordionExample2">
-
-                                    <div class="accordion-body mt-3">
+                                    <div class="accordion-body mt-3 text-black">
                                         One to one support by team, Helpline IVR, GFE Biz Application, weekly Growth &
                                         Training sessions for any query, doubts , knowledge upgrade ( No other Company
                                         in world have this kind of support system).
                                     </div>
-
                                 </div>
 
                             </div>
-
                             <!-- Item -->
-
                             <div class="accordion-item mb-3">
 
                                 <h6 class="accordion-header font-base" id="heading-6">
-
                                     <button class="accordion-button fw-bold collapsed rounded pe-5" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false"
                                         aria-controls="collapse-6">
                                         How to Enroll?
                                     </button>
-
                                 </h6>
-
                                 <!-- Body -->
-
                                 <div id="collapse-6" class="accordion-collapse collapse" aria-labelledby="heading-6"
                                     data-bs-parent="#accordionExample2">
-
-                                    <div class="accordion-body mt-3">
+                                    <div class="accordion-body mt-3 text-black">
                                         you may apply on this page – our team contact you for profiling and enroll!
                                     </div>
-
                                 </div>
 
                             </div>
-
                             <!-- Item -->
-
                             <div class="accordion-item mb-3">
 
                                 <h6 class="accordion-header font-base" id="heading-7">
@@ -1905,13 +1821,11 @@
                                     </button>
 
                                 </h6>
-
                                 <!-- Body -->
-
                                 <div id="collapse-7" class="accordion-collapse collapse" aria-labelledby="heading-7"
                                     data-bs-parent="#accordionExample2">
 
-                                    <div class="accordion-body mt-3">
+                                    <div class="accordion-body mt-3 text-black">
                                         GFE is world’s Biggest Business Support Platform with Best brains from Industry,
                                         we have 15,000+ success stories, presence in 30+ Countries and 50+ Cities.
                                     </div>
@@ -1921,7 +1835,6 @@
                             </div>
 
                         </div>
-
                         <!-- FAQ END -->
                     </div>
 
@@ -2006,15 +1919,11 @@
                                 </div>
 
                             </form>
-
                             <!-- Form END -->
-
                         </div>
 
                     </div>
-
                     <!-- Contact form END -->
-
                 </div>
 
             </div>
@@ -2022,14 +1931,12 @@
         </section>
 
         <!-- Contact form END -->
-
-
     </main>
 
     <!-- **************** MAIN CONTENT END **************** -->
 
-
-    <div class="rounded-social-buttons d-block d-sm-none fixed-bottom bg-blur border border-opacity-10 border-black ">
+    <div
+        class="rounded-social-buttons d-block d-sm-none fixed-bottom bg-blur border border-opacity-10 border-black pt-1">
         <a class="social-button facebook rounded-circle" href="#" target="_blank" rel="noopener"><i
                 class="fa-solid fa-phone-volume"></i></a>
         <a class="social-button twitter rounded-circle" href="#" target="_blank" rel="noopener"><i
@@ -2046,30 +1953,19 @@
     <footer class="pt-5 bg-body-secondary">
 
         <div class="container pb-3">
-
             <!-- Row START -->
-
             <div class="row g-4 justify-content-between align-items-center text-center">
-
                 <!-- Widget 1 START -->
-
                 <div class="col-lg-3">
-
                     <!-- logo -->
-
                     <a class="me-0" href="index.html">
-
                         <img class="light-mode-item navbar-brand-item" src="assets/images/gfe.png" alt="logo"
                             style="height:65px;width:257px;">
-
                         <img class="dark-mode-item navbar-brand-item" src="assets/images/gfe.png" alt="logo"
                             style="height:65px;width:257px;">
-
                     </a>
-
                     <br />
-
-                    <p class="fs-5 my-3">
+                    <p class="fs-5 my-3 text-black">
                         Let your Business dreams come true with World’s Fastest growing & India’s Biggest Unique
                         Organization.</p>
 
@@ -2079,24 +1975,24 @@
 
                         <li class="list-inline-item"> <a href="https://twitter.com/gfebusiness" target="_blank"
                                 rel="noopener"><i
-                                    class="fa-brands fa-twitter fs-5 bg-light-subtle twi-color p-2 rounded-circle"></i></a>
+                                    class="fa-brands fa-twitter Heena1 fs-4 bg-light-subtle twi-color p-2 rounded-circle"></i></a>
                         </li>
                         <li class="list-inline-item"> <a href="https://www.instagram.com/gfe.business/" target="_blank"
                                 rel="noopener"><i
-                                    class="fa-brands fa-instagram fs-5 bg-light-subtle insta-color p-2 rounded-circle"></i></a>
+                                    class="fa-brands fa-instagram Heena1 fs-4 bg-light-subtle insta-color p-2 rounded-circle"></i></a>
                         </li>
                         <li class="list-inline-item"> <a href="https://www.facebook.com/GFEbusiness" target="_blank"
                                 rel="noopener"><i
-                                    class="fa-brands fa-facebook-f fs-5 bg-light-subtle face-color p-2 rounded-circle"></i></a>
+                                    class="fa-brands fa-facebook-f Heena fs-4 bg-light-subtle face-color p-2 rounded-circle"></i></a>
                         </li>
                         <li class="list-inline-item"> <a href="https://www.youtube.com/@gfebusiness" target="_blank"
                                 rel="noopener"><i
-                                    class="fa-brands fa-youtube fs-5 bg-light-subtle Youtube-color p-2 rounded-circle"></i></a>
+                                    class="fa-brands fa-youtube Heena1 fs-4 bg-light-subtle Youtube-color p-2 rounded-circle"></i></a>
                         </li>
                         <li class="list-inline-item"> <a
                                 href="https://www.linkedin.com/company/13249941/admin/feed/posts/" target="_blank"
                                 rel="noopener"><i
-                                    class="fa-brands fa-linkedin fs-5 bg-light-subtle linkdin-color p-2 rounded-circle"></i></a>
+                                    class="fa-brands fa-linkedin Heena1 fs-4 bg-light-subtle linkdin-color p-2 rounded-circle"></i></a>
                         </li>
 
                     </ul>
@@ -2115,9 +2011,9 @@
 
                         <h5 class="mb-3 fs-4">Company</h5>
 
-                        <ul class="nav flex-column p-0">
+                        <ul class="nav flex-column p-0 ">
 
-                            <li class="nav-item fs-5"><a class="nav-link" href="./career.html">Career</a></li>
+                            <li class="nav-item fs-5 "><a class="nav-link" href="./career.html">Career</a></li>
 
                             <li class="nav-item fs-5"><a class="nav-link" href="./about.html">About us</a></li>
 
@@ -2142,23 +2038,24 @@
 
                     <!-- Time -->
 
-                    <p class="mb-2  fs-5">
-                        Boardline No.: <a href="#"><span class="h6 fw-light ms-2">+91 9211066888</span></a>
+                    <p class="mb-2  fs-5 text-black">
+                        Boardline No.: <a href="#"><span class="h6 fw-light ms-2 ">+91 9211066888</span></a>
                     </p>
 
-                    <p class="mb-0 fs-5">Email:<span class="h6 fw-light ms-2 fs-5">info@gfebusiness.org</span></p>
+                    <p class="mb-0 fs-5 text-black">Email: <a href="#"><span
+                                class="h6 fw-light ms-2 fs-5">info@gfebusiness.org</span></a></p>
 
                     <div class="row g-2 mt-2">
 
                         <!-- Google play store button -->
 
                         <div class="col-6 col-sm-4 col-md-3 col-lg-6 mx-auto">
-
                             <a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
-                                <img src="assets/images/client/google-play.svg" alt=""> </a>
-
+                                <img src="assets/images/client/google-play.svg" class="mb-2" alt=""> </a>
+                            <a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
+                                <img src="assets/images/client/ios-store.png" alt="">
+                            </a>
                         </div>
-
                     </div> <!-- Row END -->
 
                 </div>
@@ -2258,7 +2155,6 @@
 
     <!-- -------------END Popup Button------------- -->
 
-
     <!-- --------------Enquiry Form------------------- -->
 
     <div class="modal fade overflow-y-hidden" id="exampleModal" tabindex="-1" role="dialog"
@@ -2326,7 +2222,6 @@
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
@@ -2430,7 +2325,6 @@
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="City" value="" list="city"
                                     placeholder="City" required>
-                                <!-- <input id="color" list="suggestions"> -->
                                 <datalist id="city">
                                     <option value="Patan">
                                     <option value="Ahmedabad">
@@ -2457,7 +2351,6 @@
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
@@ -2465,7 +2358,6 @@
     <style>
         .gfe-color {
             background: radial-gradient(circle at 20% 130%, #003f8cb5 0%, #005b8ca8 45%);
-            /* background: -webkit-radial-gradient( #73D81C 0%, #2786ED 5%, #01228D 45%, #E9FF8D 60%, #85B4B8 90%); */
         }
     </style>
 
@@ -2572,7 +2464,6 @@
                                         class="text-danger">*</span></label>
                                 <input type="text" class="form-control" name="City" value="" list="city"
                                     placeholder="City" required>
-                                <!-- <input id="color" list="suggestions"> -->
                                 <datalist id="city">
                                     <option value="Patan">
                                     <option value="Ahmedabad">
@@ -2599,15 +2490,12 @@
                         </div>
                     </form>
                 </div>
-
             </div>
         </div>
     </div>
 
     <style>
         .gf-color {
-            /* background: radial-gradient(circle at 20% 130%, #003f8cb5 0%, #005b8ca8 45%); */
-            /* background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf) !important; */
             background-color: #25b0b4;
         }
     </style>
@@ -2642,29 +2530,19 @@
 
     <!-- ---------------- product reserch end------------------- -->
 
-
-
-
-
     <!-- Back to top -->
 
     <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
 
-
-
     <!-- Bootstrap JS -->
 
     <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
-
 
     <!-- Vendors -->
 
     <script src="assets/vendor/tiny-slider/tiny-slider.js"></script>
 
     <script src="assets/vendor/aos/aos.js"></script>
-
-
 
     <!-- Template Functions -->
 
