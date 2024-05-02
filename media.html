@@ -123,7 +123,8 @@
 					</li>
 					<li class="list-inline-item"> <a href="https://www.facebook.com/GFEbusiness" target="_blank"
 							rel="noopener"><i
-								class="fa-brands fa-facebook-f fs-5 bg-light-subtle face-color p-2 rounded-circle"></i></a>
+								class="fa-brands fa-facebook-f fs-5 bg-light-subtle face-color  rounded-circle"
+								style="padding: 9px 13px;"></i></a>
 					</li>
 					<li class="list-inline-item"> <a href="https://www.youtube.com/@gfebusiness" target="_blank"
 							rel="noopener"><i
@@ -350,7 +351,7 @@
 
 						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
 						</li>
-						<li><a class="dropdown-item" href="test2.html"><i
+						<li><a class="dropdown-item" href="MyService.html"><i
 									class="fa-solid fa-money-bill-1-wave me-2"></i>Payment
 								Service </a>
 						</li>
@@ -594,7 +595,7 @@
 
 			<!-- Row START -->
 
-			<div class="row g-4 justify-content-between align-items-center text-center">
+			<div class="row g-4 justify-content-between align-items-baseline  text-center">
 
 				<!-- Widget 1 START -->
 
@@ -648,7 +649,7 @@
 
 				<!-- Widget 2 START -->
 
-				<div class="col-lg-3">
+				<div class="col-lg-2">
 
 					<div class="row gx-0 text-center">
 
@@ -677,9 +678,68 @@
 				</div>
 
 				<!-- Widget 2 END -->
+				<div class="col-lg-3 ">
+					<h4 class="mb-3 fs-4 text-weig text-black">Quick Links</h4>
+					<div class="row gx-0 text-center justify-content-around ">
+
+						<!-- Link block -->
+						<div class="col-lg-5">
+							<div class="row gx-0 text-center">
+
+
+								<ul class="nav flex-column p-0">
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexMumbai.html">Mumbai</a></li>
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexSurat.html">Surat</a></li>
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexNashik.html">Nashik</a></li>
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexNagpur.html">Nagpur</a></li>
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexHyderabad.html">Hyderabad</a></li>
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexDelhi.html">Delhi</a></li>
+
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-5 ">
+							<div class="row gx-0 text-center">
+								<ul class="nav flex-column p-0">
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexAhmedabad.html">Ahmedabad</a></li>
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexRajkot.html">Rajkot</a></li>
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexVadodara.html">Vadodara</a></li>
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="#">Pune</a>
+									</li>
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexIndore.html">Indore</a></li>
+
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexKolkata.html">Kolkata</a></li>
+
+								</ul>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
 
 				<!-- Widget 3 START -->
-
 				<style>
 					.andro-App {
 						aspect-ratio: 6/2;
@@ -830,7 +890,7 @@
 				</div>
 				<div class="modal-body">
 					<form action="#!">
-						<div class="row gy-4  p-2">
+						<div class="row gy-1">
 							<div class="col-12">
 								<label for="fullname" class="form-label">Full Name <span
 										class="text-danger">*</span></label>
@@ -863,6 +923,33 @@
 									<input type="tel" class="form-control" id="phone" name="phone" value="">
 								</div>
 							</div>
+							<div class="col-12 col-md-6 ">
+								<label for="state" class="form-label text-black ">State <span
+										class="text-danger">*</span></label>
+								<input type="text" class="form-control" name="State" value="" list="state"
+									placeholder="State" required>
+								<datalist id="state">
+									<option value="Gujarat">
+									<option value="Goa">
+									<option value="Maharashtra">
+									<option value="West Bengal">
+									<option value="Punjab">
+								</datalist>
+							</div>
+							<div class="col-12 col-md-6 ">
+								<label for="city" class="form-label text-black ">City <span
+										class="text-danger">*</span></label>
+								<input type="text" class="form-control" name="City" value="" list="city"
+									placeholder="City" required>
+								<!-- <input id="color" list="suggestions"> -->
+								<datalist id="city">
+									<option value="Patan">
+									<option value="Ahmedabad">
+									<option value="Hyderabad">
+									<option value="Kolkata">
+									<option value="Chennai">
+								</datalist>
+							</div>
 							<div class="col-12">
 								<label for="subject" class="form-label">Subject <span
 										class="text-danger">*</span></label>
@@ -883,7 +970,6 @@
 						</div>
 					</form>
 				</div>
-
 			</div>
 		</div>
 	</div>
