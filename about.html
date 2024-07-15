@@ -151,66 +151,128 @@
 
 		<!-- Nav START -->
 
-		<nav class="navbar navbar-expand-xl">
+		<nav class="navbar navbar-expand-xl ">
 
 			<div class="container-fluid px-3 px-xl-5">
 
 				<!-- Logo START -->
 
 				<a class="navbar-brand" href="index.html">
-
 					<img class="light-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
-						style="height:55px;width:180px;">
-
+						style="height:68px;width:100px;">
 					<img class="dark-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
-						style="height:55px;width:180px;">
-
+						style="height:68px;width:100px;">
 				</a>
 
 				<!-- Logo END -->
 
-				<!-- Responsive navbar toggler -->
 
-				<button class="navbar-toggler ms-auto " type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<div class="d-flex justify-content-end ms-auto">
+					<button type="button " class="btn mb-0 p-0 d-block d-xl-none d-sm-none d-md-block"
+						data-bs-toggle="modal" data-bs-target="#example">
+						<i class="fa-solid fa-magnifying-glass  text-black-50 " style="font-size: 20px;"></i>
+					</button>
 
-					<span class="navbar-toggler-animation">
-						<span></span>
-						<span></span>
-						<span></span>
-					</span>
+					<div class="nav d-block d-sm-none d-md-block">
 
-				</button>
+
+						<!-- Responsive navbar toggler -->
+
+						<button class="navbar-toggler  " type="button" data-bs-toggle="collapse"
+							data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-animation">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+
+						</button>
+					</div>
+				</div>
 
 				<!-- Main navbar START -->
 
 				<div class="navbar-collapse collapse ronni row align-items-center " id="navbarCollapse">
+
+					<!-- Nav category menu START -->
+
+					<!-- <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+						<li class="nav-item dropdown dropdown-menu-shadow-stacked">
+
+							<a class="nav-link bg-primary bg-opacity-10 rounded-3 text-primary px-3 py-3 py-xl-0"
+								href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false"><i class="bi bi-ui-radios-grid me-2"></i><span>Category</span></a>
+
+							<ul class="dropdown-menu" aria-labelledby="categoryMenu">
+
+								<li class="dropdown-submenu dropend">
+
+									<a class="dropdown-item" href="#">Online Business University</a>
+
+									<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+										<li class="dropdown-submenu dropend">
+											<a class="dropdown-item" href="#">Export Import Training</a>
+										</li>
+
+										<li> <a class="dropdown-item" href="#">ECommerce Online Training</a> </li>
+
+										<li> <a class="dropdown-item" href="#">India’s Top 10 EXIM Products</a> </li>
+
+										<li> <a class="dropdown-item" href="#">Prepare Governments Documents</a> </li>
+
+									</ul>
+
+								</li>
+
+								<li class="dropdown-submenu dropend">
+
+									<a class="dropdown-item" href="#">International Buyers-Sellers Network</a>
+
+									<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+										<li class="dropdown-submenu dropend">
+											<a class="dropdown-item" href="#">Trade Activities</a>
+										</li>
+
+										<li> <a class="dropdown-item" href="#">Buy any Products</a> </li>
+
+										<li> <a class="dropdown-item" href="#">Become International Seller/Supplier</a>
+										</li>
+
+									</ul>
+
+								</li>
+
+							</ul>
+
+						</li>
+
+					</ul> -->
+
+					<!-- Nav category menu END -->
+
 					<!-- Nav Main menu START -->
 
-					<ul class="navbar-nav navbar-nav-scroll" style="justify-content: center;">
+					<ul class="navbar-nav navbar-nav-scroll hi" style="justify-content: center;">
 
 						<!-- Nav item 1 Demos -->
 
 						<li class="nav-item dropdown">
-
 							<a class="nav-link" href="index.html" id="demoMenu" aria-haspopup="true"
 								aria-expanded="false">Home</a>
-
 						</li>
 
 						<li class="nav-item dropdown">
-
 							<a class="nav-link" href="about.html" id="demoMenu" aria-haspopup="true"
 								aria-expanded="false">About Us</a>
-
 						</li>
 
 						<li class="nav-item dropdown">
-
 							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="gallery.html"
 								id="demoMenu" aria-haspopup="true" aria-expanded="false">Gallery</a>
-
 							<ul class="dropdown-menu" aria-labelledby="demoMenu">
 
 								<li> <a class="dropdown-item" href="team.html">Team</a></li>
@@ -258,7 +320,7 @@
 										target="_blank">Currency
 										Converter</a></li>
 
-								<li> <a class="dropdown-item" target="_blank"
+								<li> <a class="dropdown-item" target="_self"
 										href="https://www.searates.com/shipping/request?utm_source=google&utm_medium=cpc&utm_campaign=17499343658&utm_content=142980297292&utm_term=freight%20calculator&gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJU_Pim9FfTNBF0az3bh9ZV8KRj1PosCr5fYmnDEyrt1ukw5-V0vNYBoCvT8QAvD_BwE">Freight
 										Calculator</a></li>
 
@@ -268,51 +330,54 @@
 						</li>
 
 						<li class="nav-item dropdown">
+							<a class="nav-link" href="https://lms.gfebusiness.org/" id="demoMenu" aria-haspopup="true"
+								aria-expanded="false">Online Courses</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="demoMenu"
+								aria-haspopup="true" aria-expanded="false">Services</a>
 
-							<a class="nav-link" href="career.html" id="demoMenu" aria-haspopup="true"
-								aria-expanded="false">Career</a>
+							<ul class="dropdown-menu" aria-labelledby="demoMenu">
+								<li> <a class="dropdown-item" href="training.html" target="_blank">Export Import
+										Training</a></li>
+								<li> <a class="dropdown-item" target="_blank" href="setup.html">Exim Business Setup</a>
+								</li>
+								<li> <a class="dropdown-item" href="gsp.html">GSP</a></li>
+								<li> <a class="dropdown-item" href="ecommerce.html">E-Commerce</a></li>
+								<li> <a class="dropdown-item" href="ebo.html">EBO</a></li>
+								<li> <a class="dropdown-item" href="CHA.html">CHA</a></li>
+								<li> <a class="dropdown-item" href="Domestic&InternationalTradeTours.html">Domestic &
+										International Tour</a></li>
+							</ul>
 
 						</li>
 
 						<li class="nav-item dropdown">
-
 							<a class="nav-link" href="contact-us.html" id="demoMenu" aria-haspopup="true"
 								aria-expanded="false">Contact Us</a>
-
 						</li>
 
 						<!-- Nav Main menu END -->
-
-						<!-- Nav Search START -->
-
 
 						<!-- --------START Live Trade Button------------- -->
 
 						<div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
 
 							<div class="nav-item w-100 ">
-
 								<a href="livetradeproduct.html" class="btn text-white mb-0" rel="noopener"
 									style="background-color: #41B06E;"><span class="blink">Live
 										Trade</span></a>
-								<!-- <form class="position-relative">
-
-									<input class="form-control pe-5 bg-transparent" type="search" placeholder="Search"
-										aria-label="Search">
-
-									<button
-										class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset"
-										aria-label="submit" type="submit">
-
-										<i class="fas fa-search fs-6 "></i>
-
-									</button>
-
-								</form> -->
-
 							</div>
 						</div>
+						<div class="nav my-3 my-xl-0 px-4 d-none d-sm-block flex-nowrap align-items-center">
+
+							<button type="button" class="btn mb-0" data-bs-toggle="modal" data-bs-target="#example">
+								<i class="fa-solid fa-magnifying-glass fs-4 text-black-50 "></i>
+							</button>
+						</div>
+
 					</ul>
+					<!--  -->
 				</div>
 				<!-- --------END Live Trade Button------------- -->
 				<!-- Main navbar END -->
@@ -321,12 +386,13 @@
 
 				<div class="dropdown ms-1 ms-lg-0">
 
+					<a href="sign-in.html" class="btn text-white mb-0 d-none" style="background-color: #41B06E;">Sign
+						In</a>
+
 					<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button"
 						data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
 						aria-expanded="false">
-
 						<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
-
 					</a>
 
 					<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
@@ -337,11 +403,14 @@
 						<li class="px-3 mb-3">
 
 							<div class="d-flex align-items-center">
+
 								<!-- Avatar -->
+
 								<div class="avatar me-3">
 									<a href="admin-dashboard.html"><img class="avatar-img rounded-circle shadow"
 											src="assets/images/avatar/01.jpg" alt="avatar"></a>
 								</div>
+
 								<div>
 
 									<a class="h6" href="#">Lori Ferguson</a>
@@ -360,19 +429,22 @@
 
 						<!-- Links -->
 
-						<li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
+						<li><a class="dropdown-item" href="instructor-edit-profile.html"><i
+									class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
 						</li>
 
-						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
+						<li><a class="dropdown-item" href="instructor-setting.html"><i
+									class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
 						</li>
 						<li><a class="dropdown-item" href="MyService.html"><i
-									class="fa-solid fa-money-bill-1-wave me-2"></i>Payment
+									class="fa-solid fa-money-bill-1-wave me-2"></i>My
 								Service </a>
 						</li>
 
-						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help</a></li>
+						<li><a class="dropdown-item" href="help-center.html"><i
+									class="bi bi-info-circle fa-fw me-2"></i>Help</a></li>
 
-						<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i
+						<li><a class="dropdown-item bg-danger-soft-hover" href="sign-in.html"><i
 									class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
 
 						<li>
@@ -491,9 +563,9 @@
 						</figure>
 
 						<!-- Title -->
-						<h1 class="position-relative fs-2" data-aos="fade-down" data-aos-duration="1000">Let your
-							business dreams come true with world’s fastest
-							growing & india’s biggest unique organization.</h1>
+						<h1 class="position-relative fs-2" data-aos="fade-down" data-aos-duration="1000">Let Your
+							Business Dreams Come True With World’s Fastest
+							Growing & India’s Biggest Unique Organization.</h1>
 					</div>
 					<!-- Title and SVG END -->
 				</div>
@@ -518,13 +590,7 @@
 					<!-- Center image -->
 					<div class="col-6 col-md-4 position-relative">
 						<!-- SVG decoration -->
-						<figure class="d-md-none position-absolute bottom-0 start-0 ms-n5 d-none d-xl-block d-sm-none"
-							data-aos="zoom-in" data-aos-duration="1000">
-							<svg width="92px" height="100px">
-								<path class="fill-blue"
-									d="M127.581,25.993 C122.659,31.935 113.441,24.283 118.356,18.351 C123.278,12.408 132.496,20.060 127.581,25.993 ZM115.247,49.292 C106.977,59.275 91.492,46.420 99.748,36.454 C108.018,26.470 123.503,39.325 115.247,49.292 ZM86.935,2.378 C91.464,-3.089 99.944,3.951 95.423,9.409 C90.894,14.876 82.414,7.836 86.935,2.378 ZM93.501,43.010 C84.246,54.182 66.918,39.796 76.157,28.643 C85.411,17.471 102.740,31.856 93.501,43.010 ZM57.726,6.672 C63.633,-0.460 74.694,8.723 68.796,15.842 C62.889,22.973 51.828,13.791 57.726,6.672 ZM65.132,42.254 C65.414,45.250 64.407,48.520 62.488,50.836 C60.459,53.285 57.635,54.609 54.547,55.032 C51.448,55.456 48.387,54.215 45.962,52.383 C43.626,50.618 42.031,47.307 41.761,44.441 C41.479,41.444 42.486,38.175 44.406,35.858 C46.434,33.410 49.258,32.085 52.346,31.662 C55.446,31.238 58.507,32.479 60.931,34.312 C63.267,36.076 64.862,39.387 65.132,42.254 ZM48.502,101.257 C42.496,108.507 31.251,99.172 37.247,91.934 C43.252,84.684 54.497,94.019 48.502,101.257 ZM23.966,17.251 C29.774,10.238 40.651,19.267 34.852,26.269 C29.043,33.281 18.167,24.251 23.966,17.251 ZM9.378,26.952 C15.088,20.059 25.780,28.935 20.079,35.817 C14.369,42.711 3.677,33.835 9.378,26.952 ZM10.074,49.315 C5.742,54.545 -2.369,47.811 1.955,42.590 C6.287,37.361 14.399,44.094 10.074,49.315 ZM10.889,68.408 C13.679,70.517 13.903,74.910 11.746,77.514 C9.434,80.305 5.439,80.481 2.640,78.366 C-0.150,76.258 -0.375,71.865 1.783,69.260 C4.095,66.469 8.090,66.293 10.889,68.408 ZM9.881,114.513 C5.450,119.861 -2.845,112.974 1.578,107.635 C6.008,102.287 14.304,109.173 9.881,114.513 ZM12.758,94.899 C14.381,91.994 16.764,89.898 20.208,89.575 C22.532,89.358 25.068,90.140 26.866,91.630 C28.766,93.203 29.795,95.394 30.124,97.789 C30.589,101.171 28.744,104.038 26.279,106.100 C26.173,106.189 26.066,106.278 25.960,106.367 C24.381,107.689 21.309,108.287 19.326,107.873 C17.757,107.545 16.312,106.882 15.033,105.915 C13.453,104.722 12.479,102.811 12.056,100.935 C11.657,99.164 11.627,96.924 12.555,95.263 C12.622,95.142 12.690,95.021 12.758,94.899 ZM23.787,69.054 C28.020,63.943 35.947,70.523 31.721,75.626 C27.487,80.736 19.560,74.156 23.787,69.054 ZM23.899,47.361 C28.822,41.418 38.039,49.070 33.125,55.003 C28.202,60.945 18.985,53.293 23.899,47.361 ZM51.663,129.014 C42.901,139.591 26.494,125.972 35.242,115.411 C44.004,104.833 60.411,118.454 51.663,129.014 ZM69.137,67.525 C69.381,67.564 69.626,67.602 69.871,67.641 C77.305,68.819 80.658,77.977 75.894,83.728 C71.131,89.478 61.508,87.888 58.968,80.803 C58.884,80.570 58.800,80.337 58.717,80.104 C56.311,73.396 62.098,66.410 69.137,67.525 Z" />
-							</svg>
-						</figure>
+
 						<!-- Image -->
 						<img class="rounded-4" data-aos="fade-up" data-aos-duration="1000"
 							src="assets/images/about/img5.png" alt="">
@@ -535,7 +601,7 @@
 						<div class="row g-4">
 							<!-- Content -->
 							<div class="col-sm-6 col-md-12">
-								<div class="bg-grad rounded-4 p-5 text-start">
+								<!-- <div class="bg-grad rounded-4 p-5 text-start">
 									<p class="text-white mb-1" data-aos="fade-down" data-aos-duration="1000">We are
 										GFEians</p>
 									<h3 class="text-white" data-aos="fade-down" data-aos-duration="1000">“A team is
@@ -544,7 +610,9 @@
 										A team is a
 										Group of people that
 										Trust each other”</h3>
-								</div>
+								</div> -->
+								<img class="rounded-4" data-aos="fade-up" data-aos-duration="1000"
+									src="assets/images/about/img7.jpg" alt="">
 							</div>
 							<!-- Image -->
 							<div class="col-sm-6 col-md-12 col-lg-6" data-aos="fade-up" data-aos-duration="1000">
@@ -566,11 +634,9 @@
 					<div class="col-lg-8">
 						<h2 class="mb-0" data-aos="fade-down" data-aos-duration="1000">About GFE Group</h2>
 						<div class="Pogram-line mx-0 mb-3"></div>
-						<p class="mb-0 text-black" data-aos="fade-right" data-aos-duration="1000">GFE Group is the
-							world's
-							fastest-growing business support organisation and
-							India's
-							Biggest Business Network.</p>
+						<p class="mb-0 text-black" data-aos="fade-right" data-aos-duration="1000">Gfe Group Is India
+							Based Mnc Group Of Companies Having Own Setup In Uae, Malaysia, Vietnam And Usa, Diversified
+							Into Export Import, E-commerce, Logistics, Education, Start Up And Immigration.</p>
 					</div>
 				</div>
 
@@ -709,17 +775,17 @@
 
 					<div class="col-lg-7 mt-4 mt-lg-0 text-black">
 						<!-- Title -->
-						<h4 class="mb-3" data-aos="fade-down" data-aos-duration="1000">25,000+ happy clients joined with
-							us to achieve their goals</h4>
+						<h4 class="mb-3" data-aos="fade-down" data-aos-duration="1000">25,000+ Happy Clients Joined
+							Us To Achieve Their Goals</h4>
 
 						<!-- Content -->
-						<p>We have been adding value to people’s lives since 1998.
-							Whether you want to enrol in Import Export Program or want to scale up your
-							E-Commerce business, Make Career with Online Education, Looking to Start your
-							Start-up or Want to Start your Franchise Business. We have all that Options for you in our
-							box. </p>
-						<p>We are also having different brands in our bucket like Foodish, Growthpath,
-							Digiexperts, GFE Education, GFE Safal Startup, GFE Franchise and many
+						<p>We Have Been Adding Value To People’s Lives Since 1998.
+							Whether You Want To Enrol In Import Export Program or Want To Scale Up Your
+							E-Commerce Business, Make Career with Online Education, Looking To Start Your
+							Start-up Or Want To Start Your Franchise Business. We Have All That Options For You In Our
+							Box. </p>
+						<p>We Are Also Having Different Brands In Our Bucket Like Foodish, Growthpath,
+							Digiexperts, GFE Education, GFE Safal Startup, GFE Franchise And Many
 							More.</p>
 
 						<!-- Info -->
@@ -727,47 +793,47 @@
 							<li class="list-group-item d-flex text-black" data-aos="fade-right"
 								data-aos-duration="1000">
 								<i class="bi bi-patch-check-fill text-success me-2"></i>
-								<p>Having presence members and
-									associations in 100+ cities and 50+ countries.</p>
+								<p>Having Presence Members And
+									Associations in 100+ Cities And 35+ Countries.</p>
 							</li>
 							<li class="list-group-item d-flex text-black" data-aos="fade-left" data-aos-duration="1500">
 								<i class="bi bi-patch-check-fill text-success me-2"></i>
-								<p>Trained 25000 + business owners
-									across the globe.</p>
+								<p>Trained 25000 + Business Owners
+									Across The Globe.</p>
 							</li>
 							<li class="list-group-item d-flex text-black" data-aos="fade-right"
 								data-aos-duration="1000">
 								<i class="bi bi-patch-check-fill text-success me-2"></i>
-								<p>Being awarded as top business
-									training and networking organisation from the last 7 years.</p>
+								<p>Being Awarded As Top Business
+									Training And Networking Organisation From The Last 7 Years.</p>
 							</li>
 							<li class="list-group-item d-flex text-black" data-aos="fade-left" data-aos-duration="1500">
 								<i class="bi bi-patch-check-fill text-success me-2"></i>
-								<p>Having the biggest network of
-									farmers, traders, suppliers CHAsand freight forwarders, providing services globally.
+								<p>Having The Biggest Network Of
+									Farmers, Traders, Suppliers CHAs And Freight Forwarders, Providing Services
+									Globally.
 								</p>
 							</li>
 							<li class="list-group-item d-flex text-black" data-aos="fade-right"
 								data-aos-duration="1000">
 								<i class="bi bi-patch-check-fill text-success me-2"></i>
-								<p>We are ISO Certified, World’s
+								<p>We Are ISO Certified, World’s
 									Fastest Growing Organisation.</p>
 							</li>
 							<li class="list-group-item d-flex text-black" data-aos="fade-left" data-aos-duration="1500">
 								<i class="bi bi-patch-check-fill text-success me-2"></i>
-								<p>Conduct Total 300+ Events
+								<p>Conduct Total 200+ Events
 									Yearly.</p>
 							</li>
 							<li class="list-group-item d-flex text-black" data-aos="fade-right"
 								data-aos-duration="1000">
 								<i class="bi bi-patch-check-fill text-success me-2"></i>
-								<p>200+ Industry Experts are
-									working with this Organisation.</p>
+								<p>100+ Industry Experts Are Working With This Organisation.</p>
 							</li>
 							<li class="list-group-item d-flex text-black" data-aos="fade-left" data-aos-duration="1500">
 								<i class="bi bi-patch-check-fill text-success me-2"></i>
-								<p>Successful Register our Name in
-									INDIA GLORY BOOK OF RECORDS for Fastest Growing Global Chamber of India.</p>
+								<p>Successful Register Our Name In
+									INDIA GLORY BOOK OF RECORDS for Fastest Growing Global Chamber Of India.</p>
 							</li>
 						</ul>
 					</div>
@@ -781,40 +847,35 @@
 			<div class="container">
 				<div class="row d-flex justify-content-center">
 					<!-- Logo item -->
-					<div class="col-6 col-sm-4 col-lg-2">
-						<div class="p-4 grayscale text-center" data-aos="zoom-in" data-aos-duration="1000">
-							<img src="assets/images/certificates/APEDA-rb.png" alt="">
+					<div class="tiny-slider arrow-round">
+
+						<div class="tiny-slider-inner" data-arrow="false" data-autoplay="true" data-dots="false"
+							data-gutter="80" data-items-xl="6" data-items-lg="5" data-items-md="4" data-items-sm="3"
+							data-items-xs="2">
+
+							<!-- Slide item START -->
+
+							<div class="item"> <img src="assets/images/certificates/APEDA.jpg" alt=""> </div>
+
+							<div class="item"> <img src="assets/images/certificates/FIEO.jpg" alt=""> </div>
+
+							<div class="item"> <img src="assets/images/certificates/FSSAI.jpg" alt=""> </div>
+
+							<div class="item"> <img src="assets/images/certificates/GMP.jpg" alt=""> </div>
+
+							<div class="item"> <img src="assets/images/certificates/ISO.jpg" alt=""> </div>
+
+							<div class="item"> <img src="assets/images/certificates/MSME.jpg" alt=""> </div>
+
+							<div class="item"> <img src="assets/images/certificates/Coconut Certificate.jpg" alt="">
+							</div>
+
+							<div class="item"> <img src="assets/images/certificates/GCCI Certificate.jpg" alt=""> </div>
+
+							<div class="item"> <img src="assets/images/certificates/Spice Board Cerificate.jpg" alt="">
+							</div>
 						</div>
-					</div>
-					<!-- Logo item -->
-					<div class="col-6 col-sm-4 col-lg-2">
-						<div class="p-4 grayscale text-center" data-aos="zoom-in" data-aos-duration="1000">
-							<img src="assets/images/certificates/FIEO-rb.png" alt="">
-						</div>
-					</div>
-					<!-- Logo item -->
-					<div class="col-6 col-sm-4 col-lg-2">
-						<div class="p-4 grayscale text-center" data-aos="zoom-in" data-aos-duration="1000">
-							<img src="assets/images/certificates/FSSAI-rb.png" alt="">
-						</div>
-					</div>
-					<!-- Logo item -->
-					<div class="col-6 col-sm-4 col-lg-2">
-						<div class="p-4 grayscale text-center" data-aos="zoom-in" data-aos-duration="1000">
-							<img src="assets/images/certificates/GMP-rb.png" alt="">
-						</div>
-					</div>
-					<!-- Logo item -->
-					<div class="col-6 col-sm-4 col-lg-2">
-						<div class="p-4 grayscale text-center" data-aos="zoom-in" data-aos-duration="1000">
-							<img src="assets/images/certificates/ISO-rb.png" alt="">
-						</div>
-					</div>
-					<!-- Logo item -->
-					<div class="col-6 col-sm-4 col-lg-2">
-						<div class="p-4 grayscale text-center" data-aos="zoom-in" data-aos-duration="1000">
-							<img src="assets/images/certificates/MSME-rb.png" alt="">
-						</div>
+
 					</div>
 				</div>
 			</div>
@@ -828,7 +889,7 @@
 					<div class="col-md-4 mb-4 mb-md-0 p-2 rounded p-3" data-aos="fade-right" data-aos-duration="1000"
 						style="background-color: rgba(231, 231, 231, 0.573); box-shadow: 1px 1px 8px black;">
 						<!-- Title -->
-						<h4>Award Winning Organization Consistently 8 Years in a Row</h4>
+						<h4>Award Winning Organization Consistently 8 Years In a Row</h4>
 						<!-- Content -->
 						<ul class="list-group list-group-borderless mt-4">
 							<!-- Award item -->
@@ -992,27 +1053,23 @@
 									<p class="mb-0 small">Sr.Manager</p>
 								</div>
 
-								<div class="text-center text-black">
-									<!-- Avatar -->
+								<!-- <div class="text-center text-black">
 									<div class="avatar avatar-xxl mb-3">
 										<img class="avatar-img rounded-circle" src="assets/images/team/Manzil Sir.png"
 											alt="avatar">
 									</div>
-									<!-- Info -->
 									<h6 class="mb-0"><a href="#">Manzil Parmar</a></h6>
 									<p class="mb-0 small">Sr.Manager</p>
 								</div>
 
 								<div class="text-center text-black">
-									<!-- Avatar -->
 									<div class="avatar avatar-xxl mb-3">
 										<img class="avatar-img rounded-circle" src="assets/images/team/Seema Madam.png"
 											alt="avatar">
 									</div>
-									<!-- Info -->
 									<h6 class="mb-0"><a href="#">Seema Parmar</a></h6>
 									<p class="mb-0 small">Sr.Manager</p>
-								</div>
+								</div> -->
 
 								<div class="text-center text-black">
 									<!-- Avatar -->
@@ -1118,7 +1175,7 @@
 	<!--Footer START -->
 	<footer class="pt-5 bg-body-secondary">
 
-		<div class="container pb-3">
+		<div class="container-fluid  pb-3">
 
 			<!-- Row START -->
 
@@ -1131,15 +1188,15 @@
 					<!-- logo -->
 
 					<a class="me-0" href="index.html">
-						<img class="light-mode-item navbar-brand-item" src="assets/images/gfe.png" alt="logo"
-							style="height:65px;width:257px;">
+						<img class="light-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
+							style="height:95px;width:140px;">
 
-						<img class="dark-mode-item navbar-brand-item" src="assets/images/gfe.png" alt="logo"
-							style="height:65px;width:257px;">
+						<img class="dark-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
+							style="height:95px;width:140px;">
 					</a>
 					<br />
 					<p class="fs-5 my-3 text-black text-weig">
-						Let your Business dreams come true with World's Fastest growing & India's Biggest Unique
+						Let Your Business Dreams Come True With World's Fastest Growing & India's Biggest Unique
 						Organization.</p>
 
 					<!-- Social media icon -->
@@ -1176,15 +1233,15 @@
 
 				<!-- Widget 2 START -->
 
-				<div class="col-lg-2">
+				<div class="col-lg-1">
 
 					<div class="row gx-0 text-center">
 
 						<!-- Link block -->
 
-						<h4 class="mb-3 fs-4 text-weig text-black">Company</h4>
+						<h4 class=" fs-4 text-weig text-black">Company</h4>
 
-						<ul class="nav flex-column p-0">
+						<ul class="nav flex-column p-0 ms-4">
 
 							<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
 									href="./career.html">Career</a></li>
@@ -1203,9 +1260,33 @@
 					</div>
 
 				</div>
+				<div class="col-lg-1">
+
+					<div class="row gx-0 text-center ">
+
+						<!-- Link block -->
+
+						<h4 class=" fs-4 text-weig text-black">Country</h4>
+
+						<ul class="nav flex-column p-0 ms-3">
+
+							<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+									href="India.html">India</a></li>
+
+							<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+									href="Dubai.html">Dubai</a></li>
+
+							<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+									href="malaysia.html">Malasiya</a></li>
+
+						</ul>
+
+					</div>
+
+				</div>
 
 				<!-- Widget 2 END -->
-				<div class="col-lg-3 ">
+				<div class="col-lg-2 ">
 					<h4 class="mb-3 fs-4 text-weig text-black">Quick Links</h4>
 					<div class="row gx-0 text-center justify-content-around ">
 
@@ -1249,7 +1330,8 @@
 									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
 											href="indexVadodara.html">Vadodara</a></li>
 
-									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="#">Pune</a>
+									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+											href="indexPune.html">Pune</a>
 									</li>
 
 									<li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
@@ -1265,7 +1347,6 @@
 
 				</div>
 
-
 				<!-- Widget 3 START -->
 				<style>
 					.andro-App {
@@ -1275,14 +1356,14 @@
 					}
 				</style>
 
-				<div class="col-lg-3">
+				<div class="col-lg-2">
 
 					<h4 class="mb-2 mb-md-4 fs-4 text-black">Contact</h4>
 
 					<!-- Time -->
 
 					<p class="mb-2  fs-5 text-black text-weig">
-						Boardline No.: <a href="#" class="text-black ms-2 text-weig">+91 9211066888</a>
+						Boardline No: <a href="#" class="text-black ms-2 text-weig"><br>+91 9211066888</a>
 					</p>
 
 					<p class="mb-0 fs-5 text-black text-weig">Email: <a href="#"
@@ -1451,7 +1532,7 @@
 									<input type="tel" class="form-control" id="phone" name="phone" value="">
 								</div>
 							</div>
-							<div class="col-12 col-md-6 ">
+							<!-- <div class="col-12 col-md-6 ">
 								<label for="state" class="form-label text-black ">State <span
 										class="text-danger">*</span></label>
 								<input type="text" class="form-control" name="State" value="" list="state"
@@ -1469,7 +1550,6 @@
 										class="text-danger">*</span></label>
 								<input type="text" class="form-control" name="City" value="" list="city"
 									placeholder="City" required>
-								<!-- <input id="color" list="suggestions"> -->
 								<datalist id="city">
 									<option value="Patan">
 									<option value="Ahmedabad">
@@ -1482,7 +1562,7 @@
 								<label for="subject" class="form-label">Subject <span
 										class="text-danger">*</span></label>
 								<input type="text" class="form-control" id="subject" name="subject" value="" required>
-							</div>
+							</div> -->
 							<div class="col-12">
 								<label for="message" class="form-label">Message <span
 										class="text-danger">*</span></label>
@@ -1807,6 +1887,70 @@
 
 	<!-- ---------------- product reserch end------------------- -->
 
+	<!-- serch bar pop up start  -->
+	<div class="modal fade overflow-y-hidden" id="example" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title fs-2 font-bold honey" id="exampleModalLabel">Search Here</h5>
+					<button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="row g-3 justify-content-center">
+							<div class=" col-12 ">
+								<div class="input-group">
+									<select id="category" class="form-select" name="choices-single-defaul"
+										style="max-width: 130px; ">
+										<option value="">Category</option>
+										<option value="arrivals">New Arrivals</option>
+										<option value="ladies">Ladies</option>
+										<option value="men">Men</option>
+									</select>
+									<input id="search" type="text" class="form-control" placeholder="Enter Keywords?" />
+									<button class="btn btn-primary" type="button" onclick="filterProducts()">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</div>
+						</div>
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		var modal = document.getElementById("myModal");
+
+		// Get the button that opens the modal
+		var btn = document.getElementById("myBtn");
+
+		// Get the <span> element that closes the modal
+		var span = document.getElementsByClassName("close")[0];
+
+		// When the user clicks on the button, open the modal
+		btn.onclick = function () {
+			modal.style.display = "block";
+		}
+
+		// When the user clicks on <span> (x), close the modal
+		span.onclick = function () {
+			modal.style.display = "none";
+		}
+
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function (event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+	<!-- serch bar pop up End  -->
 	<!-- Back to top -->
 	<div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
 

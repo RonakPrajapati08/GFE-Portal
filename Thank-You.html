@@ -1,0 +1,1803 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Dark mode -->
+    <script>
+        const storedTheme = localStorage.getItem('theme')
+
+        const getPreferredTheme = () => {
+            if (storedTheme) {
+                return storedTheme
+            }
+            return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'light'
+        }
+
+        const setTheme = function (theme) {
+            if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.documentElement.setAttribute('data-bs-theme', 'dark')
+            } else {
+                document.documentElement.setAttribute('data-bs-theme', theme)
+            }
+        }
+
+        setTheme(getPreferredTheme())
+
+        window.addEventListener('DOMContentLoaded', () => {
+            var el = document.querySelector('.theme-icon-active');
+            if (el != 'undefined' && el != null) {
+                const showActiveTheme = theme => {
+                    const activeThemeIcon = document.querySelector('.theme-icon-active use')
+                    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+                    const svgOfActiveBtn = btnToActive.querySelector('.mode-switch use').getAttribute('href')
+
+                    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                        element.classList.remove('active')
+                    })
+
+                    btnToActive.classList.add('active')
+                    activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+                }
+
+                window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                    if (storedTheme !== 'light' || storedTheme !== 'dark') {
+                        setTheme(getPreferredTheme())
+                    }
+                })
+
+                showActiveTheme(getPreferredTheme())
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', () => {
+                            const theme = toggle.getAttribute('data-bs-theme-value')
+                            localStorage.setItem('theme', theme)
+                            setTheme(theme)
+                            showActiveTheme(theme)
+                        })
+                    })
+
+            }
+        })
+
+    </script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- -------FontAwsome----------- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(11, 11, 77, 0.818);">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse justify-content-between p-1">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa-regular fa-envelope"></i> info@gfebusiness.org</a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+
+                <ul class="navbar-nav d-flex flex-row gap-3">
+                    <!-- Icons -->
+                    <li class="list-inline-item"> <a href="https://twitter.com/gfebusiness" target="_blank"
+                            rel="noopener"><i
+                                class="fa-brands fa-twitter fs-5 bg-light-subtle twi-color p-2 rounded-circle"></i></a>
+                    </li>
+                    <li class="list-inline-item"> <a href="https://www.instagram.com/gfe.business/" target="_blank"
+                            rel="noopener"><i
+                                class="fa-brands fa-instagram fs-5 bg-light-subtle insta-color p-2 rounded-circle"></i></a>
+                    </li>
+                    <li class="list-inline-item"> <a href="https://www.facebook.com/GFEbusiness" target="_blank"
+                            rel="noopener"><i
+                                class="fa-brands fa-facebook-f fs-5 bg-light-subtle face-color p-2 rounded-circle"></i></a>
+                    </li>
+                    <li class="list-inline-item"> <a href="https://www.youtube.com/@gfebusiness" target="_blank"
+                            rel="noopener"><i
+                                class="fa-brands fa-youtube fs-5 bg-light-subtle Youtube-color p-2 rounded-circle"></i></a>
+                    </li>
+                    <li class="list-inline-item"> <a href="https://www.linkedin.com/company/13249941/admin/feed/posts/"
+                            target="_blank" rel="noopener"><i
+                                class="fa-brands fa-linkedin fs-5 bg-light-subtle linkdin-color p-2 rounded-circle"></i></a>
+                    </li>
+                    <!-- Icon dropdown -->
+                </ul>
+            </div>
+            <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Header START -->
+    <header class="navbar-light navbar-sticky header-static main-GFE">
+
+        <!-- Nav START -->
+
+        <nav class="navbar navbar-expand-xl ">
+
+            <div class="container-fluid px-3 px-xl-5">
+
+                <!-- Logo START -->
+
+                <a class="navbar-brand" href="index.html">
+                    <img class="light-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
+                        style="height:68px;width:100px;">
+                    <img class="dark-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
+                        style="height:68px;width:100px;">
+                </a>
+
+                <!-- Logo END -->
+
+
+                <div class="d-flex justify-content-end ms-auto">
+                    <button type="button " class="btn mb-0 p-0 d-block d-xl-none d-sm-none d-md-block"
+                        data-bs-toggle="modal" data-bs-target="#example">
+                        <i class="fa-solid fa-magnifying-glass  text-black-50 " style="font-size: 20px;"></i>
+                    </button>
+
+                    <div class="nav d-block d-sm-none d-md-block">
+
+
+                        <!-- Responsive navbar toggler -->
+
+                        <button class="navbar-toggler  " type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-animation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Main navbar START -->
+
+                <div class="navbar-collapse collapse ronni row align-items-center " id="navbarCollapse">
+
+                    <!-- Nav category menu START -->
+
+                    <!-- <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+						<li class="nav-item dropdown dropdown-menu-shadow-stacked">
+
+							<a class="nav-link bg-primary bg-opacity-10 rounded-3 text-primary px-3 py-3 py-xl-0"
+								href="#" id="categoryMenu" data-bs-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="false"><i class="bi bi-ui-radios-grid me-2"></i><span>Category</span></a>
+
+							<ul class="dropdown-menu" aria-labelledby="categoryMenu">
+
+								<li class="dropdown-submenu dropend">
+
+									<a class="dropdown-item" href="#">Online Business University</a>
+
+									<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+										<li class="dropdown-submenu dropend">
+											<a class="dropdown-item" href="#">Export Import Training</a>
+										</li>
+
+										<li> <a class="dropdown-item" href="#">ECommerce Online Training</a> </li>
+
+										<li> <a class="dropdown-item" href="#">India’s Top 10 EXIM Products</a> </li>
+
+										<li> <a class="dropdown-item" href="#">Prepare Governments Documents</a> </li>
+
+									</ul>
+
+								</li>
+
+								<li class="dropdown-submenu dropend">
+
+									<a class="dropdown-item" href="#">International Buyers-Sellers Network</a>
+
+									<ul class="dropdown-menu dropdown-menu-start" data-bs-popper="none">
+
+										<li class="dropdown-submenu dropend">
+											<a class="dropdown-item" href="#">Trade Activities</a>
+										</li>
+
+										<li> <a class="dropdown-item" href="#">Buy any Products</a> </li>
+
+										<li> <a class="dropdown-item" href="#">Become International Seller/Supplier</a>
+										</li>
+
+									</ul>
+
+								</li>
+
+							</ul>
+
+						</li>
+
+					</ul> -->
+
+                    <!-- Nav category menu END -->
+
+                    <!-- Nav Main menu START -->
+
+                    <ul class="navbar-nav navbar-nav-scroll hi" style="justify-content: center;">
+
+                        <!-- Nav item 1 Demos -->
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="index.html" id="demoMenu" aria-haspopup="true"
+                                aria-expanded="false">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="about.html" id="demoMenu" aria-haspopup="true"
+                                aria-expanded="false">About Us</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="gallery.html"
+                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Gallery</a>
+                            <ul class="dropdown-menu" aria-labelledby="demoMenu">
+
+                                <li> <a class="dropdown-item" href="team.html">Team</a></li>
+
+                                <li> <a class="dropdown-item" href="clients.html">Clients</a></li>
+
+                                <li> <a class="dropdown-item" href="events.html">Events</a></li>
+
+                                <li> <a class="dropdown-item " href="awards.html">Awards</a></li>
+
+                                <li> <a class="dropdown-item " href="media.html">Media Coverage</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="download.html"
+                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Download</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="demoMenu">
+                                <li> <a class="dropdown-item" id="mbtn" data-bs-toggle="modal" data-bs-target="#boby"
+                                        data-whatever="@mdo" href="#">Product Research Report</a></li>
+
+                                <li> <a class="dropdown-item" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
+                                        data-whatever="@mdo" href="#">Genuine International Buyers-Sellers Data</a></li>
+                            </ul>
+
+                        </li>
+
+
+                        <li class="nav-item dropdown">
+
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="resources.html"
+                                id="demoMenu" aria-haspopup="true" aria-expanded="false">Resources</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="demoMenu">
+
+                                <li> <a class="dropdown-item" href="https://www.indiantradeportal.in/"
+                                        target="_blank">HSN Code
+                                        Search</a></li>
+
+                                <li> <a class="dropdown-item" href="https://www.xe.com/currencyconverter/"
+                                        target="_blank">Currency
+                                        Converter</a></li>
+
+                                <li> <a class="dropdown-item" target="_self"
+                                        href="https://www.searates.com/shipping/request?utm_source=google&utm_medium=cpc&utm_campaign=17499343658&utm_content=142980297292&utm_term=freight%20calculator&gad_source=1&gclid=CjwKCAjw5v2wBhBrEiwAXDDoJU_Pim9FfTNBF0az3bh9ZV8KRj1PosCr5fYmnDEyrt1ukw5-V0vNYBoCvT8QAvD_BwE">Freight
+                                        Calculator</a></li>
+
+                                <li> <a class="dropdown-item" href="serviceproduct.html">Services</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="https://lms.gfebusiness.org/" id="demoMenu" aria-haspopup="true"
+                                aria-expanded="false">Online Courses</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="demoMenu"
+                                aria-haspopup="true" aria-expanded="false">Services</a>
+
+                            <ul class="dropdown-menu" aria-labelledby="demoMenu">
+                                <li> <a class="dropdown-item" href="training.html" target="_blank">Export Import
+                                        Training</a></li>
+                                <li> <a class="dropdown-item" target="_blank" href="setup.html">Exim Business Setup</a>
+                                </li>
+                                <li> <a class="dropdown-item" href="gsp.html">GSP</a></li>
+                                <li> <a class="dropdown-item" href="ecommerce.html">E-Commerce</a></li>
+                                <li> <a class="dropdown-item" href="ebo.html">EBO</a></li>
+                                <li> <a class="dropdown-item" href="CHA.html">CHA</a></li>
+                                <li> <a class="dropdown-item" href="Domestic&InternationalTradeTours.html">Domestic &
+                                        International Tour</a></li>
+                            </ul>
+
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="contact-us.html" id="demoMenu" aria-haspopup="true"
+                                aria-expanded="false">Contact Us</a>
+                        </li>
+
+                        <!-- Nav Main menu END -->
+
+                        <!-- --------START Live Trade Button------------- -->
+
+                        <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+
+                            <div class="nav-item w-100 ">
+                                <a href="livetradeproduct.html" class="btn text-white mb-0" rel="noopener"
+                                    style="background-color: #41B06E;"><span class="blink">Live
+                                        Trade</span></a>
+                            </div>
+                        </div>
+                        <div class="nav my-3 my-xl-0 px-4 d-none d-sm-block flex-nowrap align-items-center">
+
+                            <button type="button" class="btn mb-0" data-bs-toggle="modal" data-bs-target="#example">
+                                <i class="fa-solid fa-magnifying-glass fs-4 text-black-50 "></i>
+                            </button>
+                        </div>
+
+                    </ul>
+                    <!--  -->
+                </div>
+                <!-- --------END Live Trade Button------------- -->
+                <!-- Main navbar END -->
+
+                <!-- Profile START -->
+
+                <div class="dropdown ms-1 ms-lg-0">
+
+                    <a href="sign-in.html" class="btn text-white mb-0 d-none" style="background-color: #41B06E;">Sign
+                        In</a>
+
+                    <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button"
+                        data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+                    </a>
+
+                    <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3"
+                        aria-labelledby="profileDropdown">
+
+                        <!-- Profile info -->
+
+                        <li class="px-3 mb-3">
+
+                            <div class="d-flex align-items-center">
+
+                                <!-- Avatar -->
+
+                                <div class="avatar me-3">
+                                    <a href="admin-dashboard.html"><img class="avatar-img rounded-circle shadow"
+                                            src="assets/images/avatar/01.jpg" alt="avatar"></a>
+                                </div>
+
+                                <div>
+
+                                    <a class="h6" href="#">Lori Ferguson</a>
+
+                                    <p class="small m-0">example@gmail.com</p>
+
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <!-- Links -->
+
+                        <li><a class="dropdown-item" href="instructor-edit-profile.html"><i
+                                    class="bi bi-person fa-fw me-2"></i>Edit Profile</a>
+                        </li>
+
+                        <li><a class="dropdown-item" href="instructor-setting.html"><i
+                                    class="bi bi-gear fa-fw me-2"></i>Account Settings</a>
+                        </li>
+                        <li><a class="dropdown-item" href="MyService.html"><i
+                                    class="fa-solid fa-money-bill-1-wave me-2"></i>My
+                                Service </a>
+                        </li>
+
+                        <li><a class="dropdown-item" href="help-center.html"><i
+                                    class="bi bi-info-circle fa-fw me-2"></i>Help</a></li>
+
+                        <li><a class="dropdown-item bg-danger-soft-hover" href="sign-in.html"><i
+                                    class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+
+                        <!-- Dark mode options START -->
+
+                        <li>
+
+                            <div
+                                class="bg-light dark-mode-switch theme-icon-active d-flex align-items-center p-1 rounded mt-2">
+
+                                <button type="button" class="btn btn-sm mb-0" data-bs-theme-value="light">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-sun fa-fw mode-switch" viewBox="0 0 16 16">
+
+                                        <path
+                                            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+
+                                        <use href="#"></use>
+
+                                    </svg> Light
+
+                                </button>
+
+                                <button type="button" class="btn btn-sm mb-0" data-bs-theme-value="dark">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-moon-stars fa-fw mode-switch" viewBox="0 0 16 16">
+
+                                        <path
+                                            d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z" />
+
+                                        <path
+                                            d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+
+                                        <use href="#"></use>
+
+                                    </svg> Dark
+
+                                </button>
+
+                                <button type="button" class="btn btn-sm mb-0 active" data-bs-theme-value="auto">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
+
+                                        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+
+                                        <use href="#"></use>
+
+                                    </svg> Auto
+
+                                </button>
+
+                            </div>
+
+                        </li>
+
+                        <!-- Dark mode options END-->
+
+                    </ul>
+
+                </div>
+
+                <!-- Profile START -->
+
+            </div>
+
+        </nav>
+
+        <!-- Nav END -->
+    </header>
+    <!-- Header END -->
+    <main class="page-wrapper">
+        <!-- Sign In Modal-->
+
+        <!-- Page content-->
+        <!-- Page title-->
+        <section class=" pt-5 pb-7 pt-md-7 "
+            style="opacity: 0.8; background-image: url(assets/images/bg/page-title-bg.jpg);">
+            </div>
+            <div class="container position-relative zindex-5 pt-3 pb-7 pt-md-0">
+                <div class="row justify-content-center py-md-5">
+                    <div class="col-lg-6 col-md-8 text-center pt-2 mb-n3">
+                        <h1 class="text-white  fs-1">THANK YOU</h1>
+                        <p class="text-white  fw-bolder fs-5">Thank you for showing interest in Program of GFE Business
+                            -
+                            World of
+                            Import Export. Our Dedicated representative will get back to you shortly. If you want to
+                            reach out to us now, Kindly Feel Free to Contact us on <a
+                                class="nav-link-style nav-link-light text-white text-decoration-underline  "
+                                href="tel:+919211066888">+91
+                                9211066888</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact cards (details)-->
+        <section class="container-fluid bg-overlay-content mb-5 mb-md-6" style="margin-top: -120px;">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 mb-grid-gutter">
+                    <div class="card h-100 border-0 shadow-lg py-4">
+                        <div class="card-body text-center"><i class="bi bi-geo-alt mb-4 text-primary"
+                                style="font-size: 2.25rem;"></i>
+                            <h5 class=" mb-2">Address, India</h5>
+                            <p class="fs-sm mb-2">403/A Shivalik Complex, Opp. Bank of Baroda, Nr. Panchvati Cross Road,
+                                Panchvati ,Ahmedabad, Gujarat 380006</p><a class="fancy-link fs-sm"
+                                href="https://g.page/GFE Business?share" data-scroll>See on the map</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-grid-gutter">
+                    <div class="card h-100 border-0 shadow-lg py-4">
+                        <div class="card-body text-center"><i class="bi bi-clock mb-4 text-danger"
+                                style="font-size: 2.25rem;"></i>
+                            <h5 class=" mb-2">Working hours</h5>
+                            <ul class="list-unstyled fs-sm mb-0">
+                                <li>Mon - Sat: 10AM - 7PM </li>
+                                <!--<li>24-Hours</li>-->
+                                <!-- <li>Sat: 10AM - 5PM</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-grid-gutter">
+                    <div class="card h-100 border-0 shadow-lg py-4">
+                        <div class="card-body text-center"><i class="bi bi-telephone mb-4 text-success"
+                                style="font-size: 2.25rem;"></i>
+                            <h5 class=" mb-2">Phone numbers</h5>
+                            <ul class="list-unstyled fs-sm mb-0">
+                                <!--<li><span class="me-1">For services:</span><a class="nav-link-style" href="tel:+919211066888">+91 9211066888</a></li>-->
+                                <li><span class="me-1"></span><a class="nav-link-style" href="tel:+919211066888">+91
+                                        9211066888</a></li>
+
+                                <!-- <li><span class="me-1">Tech support:</span><a class="nav-link-style" href="tel:+100331697720">+1 00 33 169 7720</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-grid-gutter">
+                    <div class="card h-100 border-0 shadow-lg py-4">
+                        <div class="card-body text-center"><i class="bi bi-envelope mb-4 text-warning"
+                                style="font-size: 2.25rem;"></i>
+                            <h5 class=" mb-2">Email addresses</h5>
+                            <ul class="list-unstyled fs-sm mb-0">
+                                <!--<li><span class="me-1">For services:</span><a class="nav-link-style" href="mailto:info@GFE Business.com">info@GFE Business.com</a></li>-->
+                                <li><span class="me-1"></span><a class="nav-link-style"
+                                        href="mailto:info@GFE Business.com">info@impexperts.com</a></li>
+                                <!-- <li><span class="me-1">Tech support:</span><a class="nav-link-style" href="mailto:support@example.com">support@example.com</a></li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact cards (offices)-->
+        <section class="container mb-5 mb-md-6">
+            <h2 class="text-center mb-4 pb-4">Our offices</h2>
+            <div class="row">
+                <div class="col-lg-6 col-sm-6 mb-grid-gutter">
+                    <div class="card h-100 border-0 shadow mx-auto"><img class="card-img-top"
+                            src="https://www.gfebusiness.org/frontend/img/pages/contacts/ahmedabad.jpg" alt="Orlando">
+                        <div class="card-body p-4">
+                            <h5>Ahmedabad, India</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex align-items-start pb-3 border-bottom"><i
+                                        class="bi bi-geo-alt fs-4 mt-2 mb-0 text-primary"></i>
+                                    <div class="ps-3"><span class="fs-ms text-muted">Find us</span><a
+                                            class="d-block nav-link-style fs-sm" href="#">403/A Shivalik Complex, Opp.
+                                            Bank of Baroda, Nr. Panchvati Cross Road, Panchvati, Ahmedabad, Gujarat
+                                            380006</a></div>
+                                </li>
+                                <li class="d-flex align-items-start pt-2 pb-3 border-bottom"><i
+                                        class="bi bi-telephone fs-4 mt-2 mb-0 text-success"></i>
+                                    <div class="ps-3"><span class="fs-ms text-muted">Call us</span><a
+                                            class="d-block nav-link-style fs-sm" href="tel:+919211066888">+91
+                                            9211066888</a></div>
+                                </li>
+                                <li class="d-flex align-items-start pt-2"><i
+                                        class="bi bi-envelope fs-4 mt-2 mb-0 text-warning"></i>
+                                    <div class="ps-3"><span class="fs-ms text-muted">Write us</span><a
+                                            class="d-block nav-link-style fs-sm"
+                                            href="mailto:info@GFE Business.com">info@impexperts.com</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-6 mb-grid-gutter">
+                    <div class="card h-100 border-0 shadow mx-auto"><img class="card-img-top"
+                            src="https://www.gfebusiness.org/frontend/img/pages/contacts/dubai.jpg" alt="Chicago">
+                        <div class="card-body p-4">
+                            <h5 class="mb-3 ">Dubai, United Arab Emirates</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li class="d-flex align-items-start pb-3 border-bottom"><i
+                                        class="bi bi-geo-alt fs-4 mt-2 mb-0 text-primary"></i>
+                                    <div class="ps-3"><span class="fs-ms text-muted">Find us</span><a
+                                            class="d-block nav-link-style fs-sm" href="#">P O BOX NO. 79998 BUR DUBAI -
+                                            79998</a></div>
+                                </li>
+                                <li class="d-flex align-items-start pt-2 pb-3 border-bottom"><i
+                                        class="bi bi-telephone fs-4 mt-2 mb-0 text-success"></i>
+                                    <div class="ps-3"><span class="fs-ms text-muted">Call us</span><a
+                                            class="d-block nav-link-style fs-sm"
+                                            href="tel:+971552050927">+971552050927</a></div>
+                                </li>
+                                <li class="d-flex align-items-start pt-2"><i
+                                        class="bi bi-envelope fs-4 mt-2 mb-0 text-warning"></i>
+                                    <div class="ps-3"><span class="fs-ms text-muted">Write us</span><a
+                                            class="d-block nav-link-style fs-sm"
+                                            href="mailto:vaibhav@GFE Business.com">vaibhav@impexperts.com</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--<div class="col-lg-4 col-sm-6 mb-grid-gutter">-->
+                <!--  <div class="card h-100 border-0 shadow mx-auto"><img class="card-img-top" src="https://www.gfebusiness.org/frontend/img/pages/contacts/newyork.jpg" alt="New York">-->
+                <!--    <div class="card-body">-->
+                <!--      <h5>New York, USA</h5>-->
+                <!--      <ul class="list-unstyled mb-0">-->
+                <!--        <li class="d-flex align-items-start pb-3 border-bottom"><i class="ai-map-pin fs-lg mt-2 mb-0 text-primary"></i>-->
+                <!--          <div class="ps-3"><span class="fs-ms text-muted">Find us</span><a class="d-block nav-link-style fs-sm" href="#">396 Lillian Blvd, Holbrook, NY 11741, USA</a></div>-->
+                <!--        </li>-->
+                <!--        <li class="d-flex align-items-start pt-2 pb-3 border-bottom"><i class="ai-phone fs-lg mt-2 mb-0 text-primary"></i>-->
+                <!--          <div class="ps-3"><span class="fs-ms text-muted">Call us</span><a class="d-block nav-link-style fs-sm" href="tel:+1212477690000">+1 (212) 477 690 000</a></div>-->
+                <!--        </li>-->
+                <!--        <li class="d-flex align-items-start pt-2"><i class="ai-mail fs-lg mt-2 mb-0 text-primary"></i>-->
+                <!--          <div class="ps-3"><span class="fs-ms text-muted">Write us</span><a class="d-block nav-link-style fs-sm" href="mailto:newyork@example.com">newyork@example.com</a></div>-->
+                <!--        </li>-->
+                <!--      </ul>-->
+                <!--    </div>-->
+                <!--  </div>-->
+                <!--</div>-->
+            </div>
+        </section>
+        <!-- Map + Contact form-->
+        <section class="border-top" id="map">
+            <div class="row g-0 gallery">
+                <div class="col-lg-6 px-3 px-lg-5">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.063290209961!2d72.55273667531385!3d23.021448279174496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e849102e1c673%3A0x62a43c9f85aeadbf!2sGFE%20Business!5e0!3m2!1sen!2sin!4v1692982498649!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <div class="col-lg-6 px-3 px-lg-5">
+                    <div class="pt-5 pb-6 pt-md-6 mx-auto" style="max-width: 720px;">
+                        <h2 class="h3 pb-4">Contact</h2>
+                        <form action="https://www.gfebusiness.org/store" method="post" class="needs-validation row"
+                            novalidate>
+                            <input type="hidden" name="_token" value="cbK2ng5d2xC1ZdiZOMKccmmPJo3P1G7OMOTj9iiO">
+                            <div class="col-sm-6 mb-3 pb-1">
+                                <label class="form-label" for="cont-fn">Full name<sup
+                                        class="text-danger ms-1">*</sup></label>
+                                <input class="form-control" type="text" name="name" id="cont-fn" placeholder="Name"
+                                    required>
+                                <div class="invalid-feedback">Please enter your full name!</div>
+                            </div>
+                            <div class="col-sm-6 mb-3 pb-1">
+                                <label class="form-label" for="cont-email">Email address<sup
+                                        class="text-danger ms-1">*</sup></label>
+                                <input class="form-control" type="email" name="email" id="cont-email"
+                                    placeholder="Email" required>
+                                <div class="invalid-feedback">Please enter a valid email address!</div>
+                            </div>
+                            <div class="col-sm-6 mb-3 pb-1">
+                                <label class="form-label" for="cont-phone">Phone number</label>
+                                <div class="input-group">
+                                    <select class="form-select" id="validationCustom04" name="country_code" required>
+                                        <option value="India">+91</option>
+                                        <option value="Afghanistan">+93</option>
+                                        <option value="Åland Islands">+358</option>
+                                        <option value="Albania">+355</option>
+                                        <option value="Algeria">+213</option>
+                                        <option value="American Samoa">+1684</option>
+                                        <option value="Andorra">+376</option>
+                                        <option value="Angola">+244</option>
+                                        <option value="Anguilla">+1264</option>
+                                        <option value="Antarctica">+672</option>
+                                        <option value="Antigua & Barbuda">+1268</option>
+                                        <option value="Argentina">+54</option>
+                                        <option value="Armenia">+374</option>
+                                        <option value="Aruba">+297</option>
+                                        <option value="Australia">+61</option>
+                                        <option value="Austria">+43</option>
+                                        <option value="Azerbaijan">+994</option>
+                                        <option value="Bahamas">+1242</option>
+                                        <option value="Bahrain">+973</option>
+                                        <option value="Bangladesh">+880</option>
+                                        <option value="Barbados">+1246</option>
+                                        <option value="Belarus">+375</option>
+                                        <option value="Belgium">+32</option>
+                                        <option value="501">+501</option>
+                                        <option value="Benin">+229</option>
+                                        <option value="Bermuda">+1441</option>
+                                        <option value="Bhutan">+975</option>
+                                        <option value="Bolivia">+591</option>
+                                        <option value="Caribbean Netherlands">+599</option>
+                                        <option value="Bosnia & Herzegovina">+387</option>
+                                        <option value="Botswana">+267</option>
+                                        <option value="Bouvet Island">+55</option>
+                                        <option value="Brazil">+55</option>
+                                        <option value="British Indian Ocean Territory">+246</option>
+                                        <option value="Brunei">+673</option>
+                                        <option value="Bulgaria">+359</option>
+                                        <option value="Burkina Faso">+226</option>
+                                        <option value="Burundi">+257</option>
+                                        <option value="Cambodia">+855</option>
+                                        <option value="Cameroon">+237</option>
+                                        <option value="Canada">+1</option>
+                                        <option value="Cape Verde">+238</option>
+                                        <option value="Cayman Islands">+1345</option>
+                                        <option value="Central African Republic">+236</option>
+                                        <option value="Chad">+235</option>
+                                        <option value="Chile">+56</option>
+                                        <option value="China">+86</option>
+                                        <option value="Christmas Island">+61</option>
+                                        <option value="Cocos (Keeling) Islands">+672</option>
+                                        <option value="Colombia">+57</option>
+                                        <option value="Comoros">+269</option>
+                                        <option value="Congo - Brazzaville">+242</option>
+                                        <option value="Congo - Kinshasa">+242</option>
+                                        <option value="Cook Islands">+682</option>
+                                        <option value="Costa Rica">+506</option>
+                                        <option value="Côte d’Ivoire">+225</option>
+                                        <option value="Croatia">+385</option>
+                                        <option value="Cuba">+53</option>
+                                        <option value="Curaçao">+599</option>
+                                        <option value="Cyprus">+357</option>
+                                        <option value="Czechia">+420</option>
+                                        <option value="Denmark">+45</option>
+                                        <option value="Djibouti">+253</option>
+                                        <option value="Dominica">+1767</option>
+                                        <option value="Dominican Republic">+1809</option>
+                                        <option value="Ecuador">+593</option>
+                                        <option value="Egypt">+20</option>
+                                        <option value="El Salvador">+503</option>
+                                        <option value="Equatorial Guinea">+240</option>
+                                        <option value="Eritrea">+291</option>
+                                        <option value="Estonia">+372</option>
+                                        <option value="Ethiopia">+251</option>
+                                        <option value="Falkland Islands (Islas Malvinas)">+500</option>
+                                        <option value="Faroe Islands">+298</option>
+                                        <option value="Fiji">+679</option>
+                                        <option value="Finland">+358</option>
+                                        <option value="France">+33</option>
+                                        <option value="French Guiana">+594</option>
+                                        <option value="French Polynesia">+689</option>
+                                        <option value="French Southern Territories">+262</option>
+                                        <option value="Gabon">+241</option>
+                                        <option value="Gambia">+220</option>
+                                        <option value="Georgia">+995</option>
+                                        <option value="Germany">+49</option>
+                                        <option value="Ghana">+233</option>
+                                        <option value="Gibraltar">+350</option>
+                                        <option value="Greece">+30</option>
+                                        <option value="Greenland">+299</option>
+                                        <option value="Grenada">+1473</option>
+                                        <option value="Guadeloupe">+590</option>
+                                        <option value="Guam">+1671</option>
+                                        <option value="Guatemala">+502</option>
+                                        <option value="Guernsey">+44</option>
+                                        <option value="Guinea">+224</option>
+                                        <option value="Guinea-Bissau">+245</option>
+                                        <option value="Guyana">+592</option>
+                                        <option value="Haiti">+509</option>
+                                        <option value="Heard & McDonald Islands">+0</option>
+                                        <option value="Vatican City">+39</option>
+                                        <option value="Honduras">+504</option>
+                                        <option value="Hong Kong">+852</option>
+                                        <option value="Hungary">+36</option>
+                                        <option value="Iceland">+354</option>
+                                        <option value="Indonesia">+62</option>
+                                        <option value="Iran">+98</option>
+                                        <option value="Iraq">+964</option>
+                                        <option value="Ireland">+353</option>
+                                        <option value="Isle of Man">+44</option>
+                                        <option value="Israel">+972</option>
+                                        <option value="Italy">+39</option>
+                                        <option value="Jamaica">+1876</option>
+                                        <option value="Japan">+81</option>
+                                        <option value="Jersey">+44</option>
+                                        <option value="Jordan">+962</option>
+                                        <option value="Kazakhstan">+7</option>
+                                        <option value="Kenya">+254</option>
+                                        <option value="Kiribati">+686</option>
+                                        <option value="North Korea">+850</option>
+                                        <option value="South Korea">+82</option>
+                                        <option value="Kosovo">+381</option>
+                                        <option value="Kuwait">+965</option>
+                                        <option value="Kyrgyzstan">+996</option>
+                                        <option value="Laos">+856</option>
+                                        <option value="Latvia">+371</option>
+                                        <option value="Lebanon">+961</option>
+                                        <option value="Lesotho">+266</option>
+                                        <option value="Liberia">+231</option>
+                                        <option value="Libya">+218</option>
+                                        <option value="Liechtenstein">+423</option>
+                                        <option value="Lithuania">+370</option>
+                                        <option value="Luxembourg">+352</option>
+                                        <option value="Macao">+853</option>
+                                        <option value="North Macedonia">+389</option>
+                                        <option value="Madagascar">+261</option>
+                                        <option value="Malawi">+265</option>
+                                        <option value="Malaysia">+60</option>
+                                        <option value="Maldives">+960</option>
+                                        <option value="Mali">+223</option>
+                                        <option value="Malta">+356</option>
+                                        <option value="Marshall Islands">+692</option>
+                                        <option value="Martinique">+596</option>
+                                        <option value="Mauritania">+222</option>
+                                        <option value="Mauritius">+230</option>
+                                        <option value="Mayotte">+262</option>
+                                        <option value="Mexico">+52</option>
+                                        <option value="Micronesia">+691</option>
+                                        <option value="Moldova">+373</option>
+                                        <option value="Monaco">+377</option>
+                                        <option value="Mongolia">+976</option>
+                                        <option value="Montenegro">+382</option>
+                                        <option value="Montserrat">+1664</option>
+                                        <option value="Morocco">+212</option>
+                                        <option value="Mozambique">+258</option>
+                                        <option value="Myanmar (Burma)">+95</option>
+                                        <option value="Namibia">+264</option>
+                                        <option value="Nauru">+674</option>
+                                        <option value="Nepal">+977</option>
+                                        <option value="Netherlands">+31</option>
+                                        <option value="Curaçao">+599</option>
+                                        <option value="New Caledonia">+687</option>
+                                        <option value="New Zealand">+64</option>
+                                        <option value="Nicaragua">+505</option>
+                                        <option value="Niger">+227</option>
+                                        <option value="Nigeria">+234</option>
+                                        <option value="Niue">+683</option>
+                                        <option value="Norfolk Island">+672</option>
+                                        <option value="Northern Mariana Islands">+1670</option>
+                                        <option value="Norway">+47</option>
+                                        <option value="Oman">+968</option>
+                                        <option value="Pakistan">+92</option>
+                                        <option value="Palau">+680</option>
+                                        <option value="Palestine">+970</option>
+                                        <option value="Panama">+507</option>
+                                        <option value="Papua New Guinea">+675</option>
+                                        <option value="Paraguay">+595</option>
+                                        <option value="Peru">+51</option>
+                                        <option value="Philippines">+63</option>
+                                        <option value="Pitcairn Islands">+64</option>
+                                        <option value="Poland">+48</option>
+                                        <option value="Portugal">+351</option>
+                                        <option value="Puerto Rico">+1787</option>
+                                        <option value="Qatar">+974</option>
+                                        <option value="Réunion">+262</option>
+                                        <option value="Romania">+40</option>
+                                        <option value="Russia">+7</option>
+                                        <option value="Rwanda">+250</option>
+                                        <option value="St. Barthélemy">+590</option>
+                                        <option value="St. Helena">+290</option>
+                                        <option value="St. Kitts & Nevis">+1869</option>
+                                        <option value="St. Lucia">+1758</option>
+                                        <option value="St. Martin">+590</option>
+                                        <option value="St. Pierre & Miquelon">+508</option>
+                                        <option value="St. Vincent & Grenadines">+1784</option>
+                                        <option value="Samoa">+684</option>
+                                        <option value="San Marino">+378</option>
+                                        <option value="São Tomé & Príncipe">+239</option>
+                                        <option value="Saudi Arabia">+966</option>
+                                        <option value="Senegal">+221</option>
+                                        <option value="Serbia">+381</option>
+                                        <option value="Serbia">+381</option>
+                                        <option value="Seychelles">+248</option>
+                                        <option value="Sierra Leone">+232</option>
+                                        <option value="Singapore">+65</option>
+                                        <option value="Sint Maarten">+1</option>
+                                        <option value="Slovakia">+421</option>
+                                        <option value="Slovenia">+386</option>
+                                        <option value="Solomon Islands">+677</option>
+                                        <option value="Somalia">+252</option>
+                                        <option value="South Africa">+27</option>
+                                        <option value="South Georgia & South Sandwich Islands">+500</option>
+                                        <option value="South Sudan">+211</option>
+                                        <option value="Spain">+34</option>
+                                        <option value="Sri Lanka">+94</option>
+                                        <option value="Sudan">+249</option>
+                                        <option value="Suriname">+597</option>
+                                        <option value="Svalbard & Jan Mayen">+47</option>
+                                        <option value="Sweden">+46</option>
+                                        <option value="Switzerland">+41</option>
+                                        <option value="Syria">+963</option>
+                                        <option value="Taiwan">+886</option>
+                                        <option value="Tajikistan">+992</option>
+                                        <option value="Tanzania">+255</option>
+                                        <option value="Thailand">+66</option>
+                                        <option value="Timor-Leste">+670</option>
+                                        <option value="Togo">+228</option>
+                                        <option value="Tokelau">+690</option>
+                                        <option value="Tonga">+676</option>
+                                        <option value="Trinidad & Tobago">+1868</option>
+                                        <option value="Tunisia">+216</option>
+                                        <option value="Turkey">+90</option>
+                                        <option value="Turkmenistan">+7370</option>
+                                        <option value="Turks & Caicos Islands">+1649</option>
+                                        <option value="Tuvalu">+688</option>
+                                        <option value="Uganda">+256</option>
+                                        <option value="Ukraine">+380</option>
+                                        <option value="United Arab Emirates">+971</option>
+                                        <option value="United Kingdom">+44</option>
+                                        <option value="United States">+1</option>
+                                        <option value="U.S. Outlying Islands">+1</option>
+                                        <option value="Uruguay">+598</option>
+                                        <option value="Uzbekistan">+998</option>
+                                        <option value="Vanuatu">+678</option>
+                                        <option value="Venezuela">+58</option>
+                                        <option value="Vietnam">+84</option>
+                                        <option value="British Virgin Islands ">+1284</option>
+                                        <option value="U.S. Virgin Islands">+1340</option>
+                                        <option value="Wallis & Futuna">+681</option>
+                                        <option value="Western Sahara">+212</option>
+                                        <option value="Yemen">+967</option>
+                                        <option value="Zambia">+260</option>
+                                        <option value="263">+263</option>
+                                    </select>
+                                    <input class="form-control" name="number" style="width: 70%;" type="text"
+                                        placeholder="Mobile No">
+                                </div>
+                                <!--<input class="form-control bg-image-0" type="text" name="number" id="cont-phone" data-format="custom" data-delimiter="-" data-blocks="2 4 2 2" placeholder="MO">-->
+                            </div>
+                            <div class="col-sm-6 mb-3 pb-1">
+                                <label class="form-label" for="cont-subject">State</label>
+                                <input class="form-control bg-image-0" type="text" name="city" id="cont-subject"
+                                    placeholder="Your State">
+                            </div>
+                            <div class="col-12 pt-2">
+                                <button class="btn btn-primary" type="submit">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- **************** MAIN CONTENT END **************** -->
+    <div
+        class="rounded-social-buttons d-block d-sm-none fixed-bottom bg-blur border border-opacity-10 border-black pt-1">
+        <a class="social-button facebook rounded-circle" href="#" target="_blank" rel="noopener"><i
+                class="fa-solid fa-phone-volume"></i></a>
+        <a class="social-button twitter rounded-circle" href="#" target="_blank" rel="noopener"><i
+                class="fa-brands fa-whatsapp"></i></a>
+        <a class="social-button youtube rounded-circle" id="mBtn" data-bs-toggle="modal" data-bs-target="#ronak"
+            data-whatever="@mdo"><i class="fa-solid fa-file-export"></i></a>
+        <a class="social-button instagram rounded-circle m-0" id="myBtn" data-bs-toggle="modal"
+            data-bs-target="#exampleModal" data-whatever="@mdo"><i class="fa-solid fa-file-signature"></i></a>
+    </div>
+
+
+    <!--Footer START -->
+    <footer class="pt-5 bg-body-secondary">
+
+        <div class="container-fluid  pb-3">
+
+            <!-- Row START -->
+
+            <div class="row g-4 justify-content-between align-items-baseline  text-center">
+
+                <!-- Widget 1 START -->
+
+                <div class="col-lg-3">
+
+                    <!-- logo -->
+
+                    <a class="me-0" href="index.html">
+                        <img class="light-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
+                            style="height:95px;width:140px;">
+
+                        <img class="dark-mode-item navbar-brand-item" src="assets/images/Gfe Business.png" alt="logo"
+                            style="height:95px;width:140px;">
+                    </a>
+                    <br />
+                    <p class="fs-5 my-3 text-black text-weig">
+                        Let Your Business Dreams Come True With World's Fastest Growing & India's Biggest Unique
+                        Organization.</p>
+
+                    <!-- Social media icon -->
+
+                    <ul class="list-inline mb-0 mt-3 d-flex justify-content-center gap-3">
+
+                        <li class="list-inline-item"> <a href="https://twitter.com/gfebusiness" target="_blank"
+                                rel="noopener"><i
+                                    class="fa-brands fa-twitter Heena1 fs-4 bg-light-subtle twi-color p-2 rounded-circle"></i></a>
+                        </li>
+                        <li class="list-inline-item"> <a href="https://www.instagram.com/gfe.business/" target="_blank"
+                                rel="noopener"><i
+                                    class="fa-brands fa-instagram Heena1 fs-4 bg-light-subtle insta-color p-2 rounded-circle"></i></a>
+                        </li>
+                        <li class="list-inline-item"> <a href="https://www.facebook.com/GFEbusiness" target="_blank"
+                                rel="noopener"><i
+                                    class="fa-brands fa-facebook-f Heena fs-4 bg-light-subtle face-color p-2 rounded-circle"></i></a>
+                        </li>
+                        <li class="list-inline-item"> <a href="https://www.youtube.com/@gfebusiness" target="_blank"
+                                rel="noopener"><i
+                                    class="fa-brands fa-youtube Heena1 fs-4 bg-light-subtle Youtube-color p-2 rounded-circle"></i></a>
+                        </li>
+                        <li class="list-inline-item"> <a
+                                href="https://www.linkedin.com/company/13249941/admin/feed/posts/" target="_blank"
+                                rel="noopener"><i
+                                    class="fa-brands fa-linkedin Heena1 fs-4 bg-light-subtle linkdin-color p-2 rounded-circle"></i></a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <!-- Widget 1 END -->
+
+                <!-- Widget 2 START -->
+
+                <div class="col-lg-1">
+
+                    <div class="row gx-0 text-center">
+
+                        <!-- Link block -->
+
+                        <h4 class=" fs-4 text-weig text-black">Company</h4>
+
+                        <ul class="nav flex-column p-0 ms-4">
+
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                    href="./career.html">Career</a></li>
+
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black" href="./about.html">About
+                                    us</a></li>
+
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                    href="./contact-us.html">Contact us</a></li>
+
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                    href="https://www.gfebusiness.org/blog/">Blogs</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-1">
+
+                    <div class="row gx-0 text-center ">
+
+                        <!-- Link block -->
+
+                        <h4 class=" fs-4 text-weig text-black">Country</h4>
+
+                        <ul class="nav flex-column p-0 ms-3">
+
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                    href="India.html">India</a></li>
+
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                    href="Dubai.html">Dubai</a></li>
+
+                            <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                    href="malaysia.html">Malasiya</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- Widget 2 END -->
+                <div class="col-lg-2 ">
+                    <h4 class="mb-3 fs-4 text-weig text-black">Quick Links</h4>
+                    <div class="row gx-0 text-center justify-content-around ">
+
+                        <!-- Link block -->
+                        <div class="col-lg-5">
+                            <div class="row gx-0 text-center">
+
+
+                                <ul class="nav flex-column p-0">
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexMumbai.html">Mumbai</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexSurat.html">Surat</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexNashik.html">Nashik</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexNagpur.html">Nagpur</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexHyderabad.html">Hyderabad</a></li>
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexDelhi.html">Delhi</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 ">
+                            <div class="row gx-0 text-center">
+                                <ul class="nav flex-column p-0">
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexAhmedabad.html">Ahmedabad</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexRajkot.html">Rajkot</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexVadodara.html">Vadodara</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexPune.html">Pune</a>
+                                    </li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexIndore.html">Indore</a></li>
+
+                                    <li class="nav-item fs-5 text-weig"><a class="nav-link text-black"
+                                            href="indexKolkata.html">Kolkata</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Widget 3 START -->
+                <style>
+                    .andro-App {
+                        aspect-ratio: 6/2;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                </style>
+
+                <div class="col-lg-2">
+
+                    <h4 class="mb-2 mb-md-4 fs-4 text-black">Contact</h4>
+
+                    <!-- Time -->
+
+                    <p class="mb-2  fs-5 text-black text-weig">
+                        Boardline No: <a href="#" class="text-black ms-2 text-weig"><br>+91 9211066888</a>
+                    </p>
+
+                    <p class="mb-0 fs-5 text-black text-weig">Email: <a href="#"
+                            class="text-black text-weig ms-2 fs-5">info@gfebusiness.org</a></p>
+
+                    <div class="row g-2 mt-2 align-items-start mx-auto justify-content-center">
+
+                        <!-- Google play store button -->
+
+                        <div class="col-6 col-sm-12 col-md-3 col-lg-6">
+                            <a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
+                                <img src="assets/images/client/google-play.svg" class="mb-2 andro-App" alt=""> </a>
+                        </div>
+                        <div class="col-6 col-sm-12 col-md-3 col-lg-6">
+                            <a href="https://play.google.com/store/apps/details?id=crm.ani.com&pcampaignid=web_share">
+                                <img src="assets/images/client/ios-store.png" class="andro-App" alt="">
+                            </a>
+                        </div>
+
+                    </div> <!-- Row END -->
+
+                </div>
+            </div><!-- Row END -->
+
+            <!-- Divider -->
+
+            <hr class="mt-4 mb-0">
+
+            <!-- Bottom footer -->
+
+            <div class="py-3">
+
+                <div class="container px-0">
+
+                    <div class="d-lg-flex justify-content-between align-items-center py-3 text-center text-md-left">
+
+                        <!-- copyright text -->
+
+                        <div class="texttext-primary-hover text-black"> Copyrights 2024 <a href="#" target="_blank"
+                                class="text-black">@ GFE Group</a></div>
+
+                        <!-- copyright links-->
+
+                        <div class="justify-content-center mt-3 mt-lg-0">
+
+                            <ul class="nav list-inline justify-content-center mb-0">
+
+                                <li class="list-inline-item">
+
+                                    <!-- Language selector -->
+
+                                    <div class="dropup mt-0 text-center text-sm-end">
+
+                                        <a class="dropdown-toggle nav-link text-black" href="#" role="button"
+                                            id="languageSwitcher" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                            <i class="fas fa-globe me-2"></i>Language
+
+                                        </a>
+
+                                        <ul class="dropdown-menu min-w-auto" aria-labelledby="languageSwitcher">
+
+                                            <li><a class="dropdown-item me-4 text-black" href="#"><img
+                                                        class="fa-fw me-2" src="assets/images/flags/uk.svg"
+                                                        alt="">English</a></li>
+
+                                            <li><a class="dropdown-item me-4 text-black" href="#"><img
+                                                        class="fa-fw me-2" src="assets/images/flags/gr.svg"
+                                                        alt="">German </a></li>
+
+                                            <li><a class="dropdown-item me-4 text-black" href="#"><img
+                                                        class="fa-fw me-2" src="assets/images/flags/sp.svg"
+                                                        alt="">French</a></li>
+
+                                        </ul>
+
+                                    </div>
+
+                                </li>
+
+                                <li class="list-inline-item"><a class="nav-link text-black"
+                                        href="terms-conditions.html">Terms &
+                                        Conditions</a></li>
+
+                                <li class="list-inline-item"><a class="nav-link pe-0 text-black"
+                                        href="terms-conditions.html">Privacy & policy</a></li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- Footer END -->
+
+    <!-- -------------START Popup Button------------- -->
+    <a href="https://wa.me/91123-456-7878"
+        class="d-sm-block d-none back-to-top row align-items-center justify-content-center"><i
+            class="fa-brands fa-whatsapp mt-3 px-2"></i></a>
+    <a href="tel:+91 123-456-7878"
+        class="d-sm-block d-none back-to-top_1 row align-items-center justify-content-center"><i
+            class="fa-solid fa-phone mt-3 px-2"></i></a>
+    <a type="button" title="Enquiry Form"
+        class="d-sm-block d-none back-to-top_2 row align-items-center justify-content-center" id="myBtn"
+        data-bs-toggle="modal" data-bs-target="#exampleModal" data-whatever="@mdo"><i
+            class="fa-solid fa-file-signature mt-3 px-2"></i></a>
+    <!-- <div class="hide">Enquiry</div> -->
+    <a href="#" title="Get Buyer Data"
+        class="d-sm-block d-none back-to-top_3 row align-items-center justify-content-center" id="mBtn"
+        data-bs-toggle="modal" data-bs-target="#ronak" data-whatever="@mdo"><i
+            class="fa-solid fa-file-export fa-bounce mt-3 px-2"></i></a>
+
+    <!-- -------------END Popup Button------------- -->
+
+    <!-- --------------Enquiry Form------------------- -->
+
+    <div class="modal fade overflow-y-hidden" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-2 font-bold honey" id="exampleModalLabel">Enquiry Form</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#!">
+                        <div class="row gy-1">
+                            <div class="col-12">
+                                <label for="fullname" class="form-label">Full Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullname" name="fullname" value="" required>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                        </svg>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" name="email" value="" required>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="phone" class="form-label">Phone Number <span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                        </svg>
+                                    </span>
+                                    <input type="tel" class="form-control" id="phone" name="phone" value="">
+                                </div>
+                            </div>
+                            <!-- <div class="col-12 col-md-6 ">
+                            <label for="state" class="form-label text-black ">State <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="State" value="" list="state"
+                                placeholder="State" required>
+                            <datalist id="state">
+                                <option value="Gujarat">
+                                <option value="Goa">
+                                <option value="Maharashtra">
+                                <option value="West Bengal">
+                                <option value="Punjab">
+                            </datalist>
+                        </div>
+                        <div class="col-12 col-md-6 ">
+                            <label for="city" class="form-label text-black ">City <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="City" value="" list="city"
+                                placeholder="City" required>
+                            <datalist id="city">
+                                <option value="Patan">
+                                <option value="Ahmedabad">
+                                <option value="Hyderabad">
+                                <option value="Kolkata">
+                                <option value="Chennai">   
+                            </datalist>
+                        </div>
+                        <div class="col-12">
+                            <label for="subject" class="form-label">Subject <span
+                                    class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="subject" name="subject" value="" required>
+                        </div> -->
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message <span
+                                        class="text-danger">*</span></label>
+                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    <button
+                                        class="btn bg-success btn-success focus:outline-none hover:bg-indigo-600 btn-lg"
+                                        data-mdb-ripple-init type="button" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- ----------------END Enquairy Form------------------- -->
+    <div class="modal fade overflow-y-hidden" id="ronak" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content gfe-color">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-2 font-bold honey text-white" id="exampleModalLabel">Get Buyer Data</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#!">
+                        <div class="row gy-4">
+
+                            <div class="col-12 mt-3">
+                                <label for="fullname" class="form-label text-white">Full Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullname" name="fullname" value=""
+                                    placeholder="Enter Your Name" required>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="email" class="form-label text-white">Email <span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-envelope text-black" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                        </svg>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" name="email" value=""
+                                        placeholder="email" required>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="phone" class="form-label text-white">Phone Number<span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-telephone text-black" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                        </svg>
+                                    </span>
+                                    <input type="tel" class="form-control" id="phone" name="phone" value=""
+                                        placeholder="number">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="state" class="form-label text-white">State <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="State" value="" list="state"
+                                    placeholder="State" required>
+                                <datalist id="state">
+                                    <option value="Gujarat">
+                                    <option value="Goa">
+                                    <option value="Maharashtra">
+                                    <option value="West Bengal">
+                                    <option value="Punjab">
+                                </datalist>
+                            </div>
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="city" class="form-label text-white">City <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="City" value="" list="city"
+                                    placeholder="City" required>
+                                <!-- <input id="color" list="suggestions"> -->
+                                <datalist id="city">
+                                    <option value="Patan">
+                                    <option value="Ahmedabad">
+                                    <option value="Hyderabad">
+                                    <option value="Kolkata">
+                                    <option value="Chennai">
+                                </datalist>
+                            </div>
+
+                            <div class="col-12 mt-1">
+                                <label for="hsn" class="form-label text-white">HSN Code <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="hsn" name="hsn" value=""
+                                    placeholder="HSN code" required>
+                            </div>
+
+                            <div class="col-12 mt-2">
+                                <div class="d-grid">
+                                    <button
+                                        class="btn bg-success btn-success focus:outline-none hover:bg-indigo-600 btn-lg"
+                                        data-mdb-ripple-init type="button" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .gfe-color {
+            background: radial-gradient(circle at 20% 130%, #003f8cb5 0%, #005b8ca8 45%);
+        }
+    </style>
+
+
+    <script>
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("mBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- ----------------END Get Buyer Data------------------- -->
+    <div class="modal fade overflow-y-hidden" id="boby" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content gf-color">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-4 font-bold honey text-white" id="exampleModalLabel">Get Your Product
+                        Research
+                        Report</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#!">
+                        <div class="row gy-4">
+
+                            <div class="col-12 mt-3">
+                                <label for="fullname" class="form-label text-white">Full Name <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullname" name="fullname" value=""
+                                    placeholder="Enter Your Name" required>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="email" class="form-label text-white">Email <span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-envelope text-black" viewBox="0 0 16 16">
+                                            <path
+                                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                                        </svg>
+                                    </span>
+                                    <input type="email" class="form-control" id="email" name="email" value=""
+                                        placeholder="email" required>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="phone" class="form-label text-white">Phone Number<span
+                                        class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                            fill="currentColor" class="bi bi-telephone text-black" viewBox="0 0 16 16">
+                                            <path
+                                                d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                        </svg>
+                                    </span>
+                                    <input type="tel" class="form-control" id="phone" name="phone" value=""
+                                        placeholder="number">
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="state" class="form-label text-white">State <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="State" value="" list="state"
+                                    placeholder="State" required>
+                                <datalist id="state">
+                                    <option value="Gujarat">
+                                    <option value="Goa">
+                                    <option value="Maharashtra">
+                                    <option value="West Bengal">
+                                    <option value="Punjab">
+                                </datalist>
+                            </div>
+                            <div class="col-12 col-md-6 mt-1">
+                                <label for="city" class="form-label text-white">City <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" name="City" value="" list="city"
+                                    placeholder="City" required>
+                                <!-- <input id="color" list="suggestions"> -->
+                                <datalist id="city">
+                                    <option value="Patan">
+                                    <option value="Ahmedabad">
+                                    <option value="Hyderabad">
+                                    <option value="Kolkata">
+                                    <option value="Chennai">
+                                </datalist>
+                            </div>
+
+                            <div class="col-12 mt-1">
+                                <label for="hsn" class="form-label text-white">HSN Code <span
+                                        class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="hsn" name="hsn" value=""
+                                    placeholder="HSN code" required>
+                            </div>
+
+                            <div class="col-12 mt-2">
+                                <div class="d-grid">
+                                    <button
+                                        class="btn bg-success btn-success focus:outline-none hover:bg-indigo-600 btn-lg"
+                                        data-mdb-ripple-init type="button" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .gf-color {
+            background-color: #25b0b4;
+        }
+    </style>
+
+
+    <script>
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("mbtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- ---------------- product reserch end------------------- -->
+
+    <!-- serch bar pop up start  -->
+    <div class="modal fade overflow-y-hidden" id="example" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fs-2 font-bold honey" id="exampleModalLabel">Search Here</h5>
+                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row g-3 justify-content-center">
+                            <div class=" col-12 ">
+                                <div class="input-group">
+                                    <select id="category" class="form-select" name="choices-single-defaul"
+                                        style="max-width: 130px; ">
+                                        <option value="">Category</option>
+                                        <option value="arrivals">New Arrivals</option>
+                                        <option value="ladies">Ladies</option>
+                                        <option value="men">Men</option>
+                                    </select>
+                                    <input id="search" type="text" class="form-control" placeholder="Enter Keywords?" />
+                                    <button class="btn btn-primary" type="button" onclick="filterProducts()">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <!-- serch bar pop up End  -->
+    <!-- Back to top -->
+    <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Vendors -->
+    <script src="assets/vendor/tiny-slider/tiny-slider.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Template Functions -->
+    <script src="assets/js/functions.js"></script>
+
+</body>
+
+</html>

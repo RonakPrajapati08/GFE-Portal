@@ -222,6 +222,10 @@ hr {
   opacity: 0.25;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 h6,
 .h6,
 h5,
@@ -26145,9 +26149,6 @@ html[dir=rtl] .choices__input {
 /*User CSS*/
 /*# sourceMappingURL=style.css.map */
 
-
-
-
 .ali {
   align-items: center !important;
 }
@@ -26405,6 +26406,11 @@ html[dir=rtl] .choices__input {
   color: white;
 }
 
+.pinterest-color {
+  background-color: #bd081c !important;
+  color: white;
+}
+
 .linkdin-color {
   background-color: #0077b5 !important;
   color: white;
@@ -26651,9 +26657,14 @@ html[dir=rtl] .choices__input {
   }
 
   .review-st {
-    right: 5% !important;
+    right: 2.5% !important;
     bottom: 40% !important;
   }
+
+  /* .ifr {
+    height: 315px;
+    width: 100px;
+  } */
 
   .t-whit {
     color: var(--bs-black);
@@ -26755,6 +26766,16 @@ html[dir=rtl] .choices__input {
     /* padding: 5px !important; */
     /* font-size: 10px !important; */
   }
+
+  /* 
+  iframe {
+    width: 340px;
+  } */
+
+  .playy {
+    right: 45%;
+    top: 32%;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -26775,6 +26796,11 @@ html[dir=rtl] .choices__input {
   .fs-5 {
     font-size: 1.10rem !important;
   }
+
+  /* .ifr {
+    height: 315px;
+    width: 200px;
+  } */
 
   .review-padd {
     padding: 15px !important;
@@ -26820,6 +26846,11 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
+  .playy {
+    right: 45%;
+    top: 44%;
+  }
+
 }
 
 @media only screen and (min-width: 992px) {
@@ -26832,6 +26863,11 @@ html[dir=rtl] .choices__input {
     width: 35%;
     margin-bottom: 5px;
   }
+
+  /* .ifr {
+    height: 350px;
+    width: 225px;
+  } */
 
   .review-padd {
     padding: 15px !important;
@@ -26881,6 +26917,10 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
+  .playy {
+    right: 45.5%;
+    top: 42.5%;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
@@ -26901,8 +26941,19 @@ html[dir=rtl] .choices__input {
     /* font-size: 10px !important; */
   }
 
+
+  /* .ifr {
+    height: 315px;
+    width: 465px;
+  } */
+
   .Heena {
     padding: 8px 12px !important;
+  }
+
+  .playy {
+    right: 46.5%;
+    top: 41%;
   }
 }
 
@@ -26913,6 +26964,17 @@ html[dir=rtl] .choices__input {
     /* padding: 5px !important; */
     /* font-size: 10px !important; */
   }
+
+  .playy {
+    right: 46.5%;
+    top: 41%;
+  }
+
+}
+
+.ifr {
+  height: 315px;
+  width: 100%;
 }
 
 /* <button class="button-62" role="button">Button 62</button */
@@ -27168,7 +27230,6 @@ html[dir=rtl] .choices__input {
 
 }
 
-
 .blink {
   animation: blink-animation 1s steps(5, start) infinite;
   -webkit-animation: blink-animation 1s steps(5, start) infinite;
@@ -27253,4 +27314,126 @@ html[dir=rtl] .choices__input {
   font-weight: bold;
   color: black;
   font-size: 21px;
+}
+
+.box-shd {
+  box-shadow: 0px 0px 1px white;
+}
+
+.later {
+  letter-spacing: 2px;
+  word-spacing: 0.5px;
+}
+
+ul>li {
+  margin-right: 25px;
+  font-weight: lighter;
+  cursor: pointer
+}
+
+.hi>li {
+  margin-right: 15px;
+  font-weight: lighter;
+  cursor: pointer
+}
+
+li.active {
+  border-bottom: 3px solid silver;
+}
+
+.item-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #f6f6f6;
+}
+
+.menu-items {
+  list-style-type: none;
+  font-size: 11px;
+  display: inline-flex;
+  margin-bottom: 0;
+  margin-top: 20px
+}
+
+.btn-success {
+  width: 100%;
+  border-radius: 0;
+}
+
+.section {
+  width: 100%;
+  margin-left: -15px;
+  padding: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #f8f9f9
+}
+
+.title-price {
+  margin-top: 30px;
+  margin-bottom: 0;
+  color: black
+}
+
+.title-attr {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: black;
+}
+
+.btn-minus {
+  cursor: pointer;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  border-right: 0;
+}
+
+.btn-plus {
+  cursor: pointer;
+  font-size: 7px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid gray;
+  border-radius: 2px;
+  border-left: 0;
+}
+
+div.section>div {
+  width: 100%;
+  display: inline-flex;
+}
+
+div.section>div>input {
+  margin: 0;
+  padding-left: 5px;
+  font-size: 10px;
+  padding-right: 5px;
+  max-width: 18%;
+  text-align: center;
+}
+
+.attr,
+.attr2 {
+  cursor: pointer;
+  margin-right: 5px;
+  height: 20px;
+  font-size: 10px;
+  padding: 2px;
+  border: 1px solid gray;
+  border-radius: 2px;
+}
+
+.attr.active,
+.attr2.active {
+  border: 1px solid orange;
 }
